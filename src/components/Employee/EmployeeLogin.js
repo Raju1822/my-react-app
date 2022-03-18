@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import logo from "./img/logo.jpg"
+import logo from "../img/logo.jpg"
 
-class Home extends Component {
+class EmployeeLogin extends Component {
   constructor(props) {
     super(props);
 
     this.state = {};
   }
-
-
 
   render() {
     return (
@@ -16,7 +14,7 @@ class Home extends Component {
         <div class="row">
           <div class="col-sm-6">
             <div className="col-md-8 text-center display-6 my-4 ">
-              <img className="img-fluid" src={logo} alt="profile" />
+              <img className="img-fluid" src={logo} alt="pictures" />
               <p>National Institute of Technology </p>
               <p> Raipur</p>
             </div>
@@ -24,14 +22,14 @@ class Home extends Component {
 
           <div class="col-sm-6">
             <div className="text-center my-2">
-              <h1 className="display-5">Admin Portal</h1>
+              <h1 className="display-4">Employee Portal</h1>
 
               <div className="card border-0 shadow rounded-3 my-5 ">
                 <div className="card-body p-4 p-sm-5 ">
                   <h5 className="card-title text-center mb-5 fw-light fs-5">
-                    Admin Sign In
+                    Employee Sign In
                   </h5>
-                  <form action="/admin">
+                  <form action="/employee-home">
                     <div className="form-floating mb-3">
                       <input
                         type="email"
@@ -88,4 +86,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default EmployeeLogin;

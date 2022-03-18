@@ -16,6 +16,9 @@ class ViewEmployeeComponent extends Component {
             this.setState({employees: res.data});
         })
     }
+    cancel(){
+        this.props.history.push('/admin');
+    }
 
     render() {
         return (
@@ -39,6 +42,7 @@ class ViewEmployeeComponent extends Component {
                     </div>
 
                 </div>
+                <button onClick={ () => this.cancel()} className="btn btn-info">Back</button>
             </div>
         )
     }

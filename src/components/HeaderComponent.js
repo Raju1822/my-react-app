@@ -53,7 +53,7 @@ class HeaderComponent extends Component {
                     href="/"
                     id="navbarDropdownMenuLink"
                     data-toggle="dropdown"
-                    aria-haspopup="true"
+
                     aria-expanded="false"
                   >
                     <i class="fa fa-user mr-2"></i>
@@ -63,10 +63,10 @@ class HeaderComponent extends Component {
                     className="dropdown-menu p-2 my-2"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-                    <a className="dropdown-item" href="/authority-login">
+                    <a className="dropdown-item" href="/authority">
                       Authority Login
                     </a>
-                    <a className="dropdown-item" href="/employee-login">
+                    <a className="dropdown-item" href="/employee">
                       Employee Login
                     </a>
                     <a className="dropdown-item" href="/">

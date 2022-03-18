@@ -35,6 +35,10 @@ class ListEmployeeComponent extends Component {
         this.props.history.push('/add-employee/_add');
     }
 
+    cancel(){
+        this.props.history.push('/admin');
+    }
+
     render() {
         return (
             <div>
@@ -71,8 +75,9 @@ class ListEmployeeComponent extends Component {
                                     )
                                 }
                             </tbody>
-                        </table>
 
+                        </table>
+<button onClick={ () => this.cancel()} className="btn btn-info">Back</button>
                  </div>
 
             </div>
