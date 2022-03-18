@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
 
+
+import avatar from "./img/avatar.png"
 class ViewEmployeeComponent extends Component {
     constructor(props) {
         super(props)
@@ -22,28 +24,72 @@ class ViewEmployeeComponent extends Component {
 
     render() {
         return (
-            <div>
-                <br></br>
-                <div className = "card col-md-6 offset-md-3">
-                    <h3 className = "text-center"> View Employee Details</h3>
-                    <div className = "card-body">
-                        <div className = "row">
-                            <label> Employee First Name: </label>
-                            <div> { this.state.employees.firstName }</div>
-                        </div>
-                        <div className = "row">
-                            <label> Employee Last Name: </label>
-                            <div> { this.state.employees.lastName }</div>
-                        </div>
-                        <div className = "row">
-                            <label> Employee Email ID: </label>
-                            <div> { this.state.employees.emailId }</div>
-                        </div>
-                    </div>
+            <>
 
-                </div>
-                <button onClick={ () => this.cancel()} className="btn btn-info">Back</button>
-            </div>
+
+      <div className="container">
+        <div className="card border-0 shadow rounded-3 my-5">
+        <h3 className = "text-center pt-5"> View Employee Details</h3>
+          <div className="text-center p-5">
+           <img src={avatar} alt="profile-pic" width="15%"/>
+           <h5>Hi..!  { this.state.employees.firstName }  { this.state.employees.lastName }</h5>
+          </div>
+
+
+           <p class="overflow-auto text-center mx-5">
+                      <table className="table table-bordered">
+                        <thead></thead>
+
+                        <tbody>
+
+                          <tr>
+                            <td> Employee First Name: </td>
+                            <td>{ this.state.employees.firstName }</td>
+                          </tr>
+
+                          <tr>
+                            <td> Employee Last Name: </td>
+                            <td>{ this.state.employees.lastName }</td>
+                          </tr>
+
+                          <tr>
+                            <td> Employee Email Id: </td>
+                            <td>{ this.state.employees.emailId }</td>
+                          </tr>
+
+                          <tr>
+                            <td> Employee Salary: </td>
+                            <td>{ this.state.employees.salary }</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </p>
+
+
+
+
+
+
+                    <button onClick={ () => this.cancel()} className="btn btn-info m-3">Back</button>
+        </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </>
+
         )
     }
 }

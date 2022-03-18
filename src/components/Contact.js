@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Header from "./Header";
+
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +10,14 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="container">
+     <>
+
+
+     <Header />
+
+
+
+     <div className="container">
         <div className="card border-0 shadow rounded-3 my-5">
           <div className="text-center p-5 text-primary">
             <h2>Developers</h2>
@@ -63,6 +72,7 @@ class Contact extends Component {
           </div>
         </div>
       </div>
+     </>
     );
   }
 }

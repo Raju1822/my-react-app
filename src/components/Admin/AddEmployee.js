@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import StaffService from "../../services/StaffService";
+
 class AddEmployee extends Component {
   constructor(props) {
     super(props);
@@ -52,7 +53,96 @@ class AddEmployee extends Component {
 }
   render() {
     return (
-      <div className="container">
+
+    <>
+
+<div className="header">
+                <header>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+            <a className="navbar-brand" href="/">
+              {/* <img src={NIT_Raipur} alt="page-icon"></img> */}
+              NIT Raipur
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item ">
+                  <a className="nav-link" href="/">
+                    {" "}
+                    <i class="fa fa-home mr-2"></i>
+                     Admin <span className="sr-only">(current)</span>
+                  </a>
+                </li>
+
+                <li className="nav-item active">
+                  <a className="nav-link" href="/addEmployee">
+                    <i className="fa fa-file mr-2" />
+                    Add Employee
+                  </a>
+                </li>
+
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    <i class="fa fa-search mr-2"></i>
+                    Search
+                  </a>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="/"
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+
+                    aria-expanded="false"
+                  >
+                    <i class="fa fa-user mr-2"></i>
+                    Logins
+                  </a>
+                  <div
+                    className="dropdown-menu p-2 my-2"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+
+                    <a className="dropdown-item" href="/">
+                      Something else here
+                    </a>
+                    <a className="dropdown-item" href="/">
+                      Something else here 2
+                    </a>
+                    <a className="dropdown-item" href="/">
+                      Something else here 3
+                    </a>
+                  </div>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/contact">
+                    {" "}
+                    <i class="fa fa-phone mr-2"></i>
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+                </header>
+        </div>
+
+    <div className="container">
         <div className="card border-0 shadow rounded-3 my-5">
           <div className="text-center p-5">
             <h2>Add New Employee</h2>
@@ -123,6 +213,10 @@ class AddEmployee extends Component {
           </div>
         </div>
       </div>
+
+
+    </>
+
     );
   }
 }

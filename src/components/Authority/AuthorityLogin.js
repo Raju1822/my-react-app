@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "../Header";
 import logo from "../img/logo.jpg";
 
 class AuthorityLogin extends Component {
@@ -10,6 +11,9 @@ class AuthorityLogin extends Component {
 
   render() {
     return (
+      <>
+      <Header />
+
       <div className="container">
         <div class="row">
           <div class="col-sm-6">
@@ -81,6 +85,7 @@ class AuthorityLogin extends Component {
           </div>
         </div>
       </div>
+      </>
     );
   }
 }

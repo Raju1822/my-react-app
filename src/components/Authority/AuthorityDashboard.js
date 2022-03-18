@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import profile from "../img/avatar.png";
 
+
 class AuthorityDashboard extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,9 @@ class AuthorityDashboard extends Component {
   render() {
     return (
       <div>
+
+
+
         {/* profile picture  */}
 
         <section className="jumbotron text-center">

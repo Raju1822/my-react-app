@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "./Header";
 import logo from "./img/logo.jpg"
 
 class Home extends Component {
@@ -9,10 +10,15 @@ class Home extends Component {
   }
 
 
-
   render() {
     return (
-      <div className="container">
+      <div>
+
+
+        <Header/>
+
+
+        <div className="container">
         <div class="row">
           <div class="col-sm-6">
             <div className="col-md-8 text-center display-6 my-4 ">
@@ -83,7 +89,11 @@ class Home extends Component {
             </div>
           </div>
         </div>
+
+        </div>
+
       </div>
+
     );
   }
 }

@@ -3,6 +3,7 @@ import AdminService from "../../services/AdminService";
 import "../../css/AdminDashboard.css";
 import Admin from "../img/admin.png";
 import StaffService from "../../services/StaffService";
+import AdminHeader from "./AdminHeader";
 class AdminDashboard extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ class AdminDashboard extends Component {
   }
   addEmployee() {
     // alert("Employee add feature comming soon........!");
-    window.location.href = "/addemployee";
+    this.props.history.push( "/addemployee");
   }
   deleteEmployee(employeeId){
     // alert("Hell" + employeeId);
@@ -23,10 +24,10 @@ class AdminDashboard extends Component {
     window.location.reload();
 }
 editEmployee(employeeId){
-  window.location.href = `/update-details/${employeeId}`;
+  this.props.history.push(`/add-employee/${employeeId}`);
 }
 viewEmployee(employeeId){
-  window.location.href = `/view-employee/${employeeId}`;
+  this.props.history.push(`/view-employee/${employeeId}`);
 }
 
   componentDidMount() {
@@ -46,6 +47,10 @@ viewEmployee(employeeId){
   render() {
     return (
       <>
+
+      <AdminHeader />
+
+
         <main role="main" className="">
           <section className="jumbotron text-center">
             <div className="container ">
@@ -166,6 +171,58 @@ viewEmployee(employeeId){
               </div>
             </div>
           </div>
+
+
+{/*        Employee Details here    */}
+
+<div className='container p-5'>
+                 <h2 className="text-center">Employees List </h2>
+
+                 <br></br>
+                 <div className = " overflow-auto row">
+                        <table className = "table table-striped table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th> Employee First Name</th>
+                                    <th> Employee Last Name</th>
+                                    <th> Employee Email Id</th>
+                                    <th> Update</th>
+                                    <th>Delete</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    this.state.staff.map(
+                                        employee =>
+                                        <tr key = {employee.id}>
+                                             <td> { employee.firstName} </td>
+                                             <td> {employee.lastName}</td>
+                                             <td> {employee.emailId}</td>
+                                             <td><button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button> </td>
+                                             <td><button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button></td>
+                                             <td><button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">View </button></td>
+                                        </tr>
+                                    )
+                                }
+                            </tbody>
+
+                        </table>
+
+                 </div>
+                <div className='row'>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
           {/* Slider page verticle nav */}
           <section className="py-5 header">
             <div className="container py-4">

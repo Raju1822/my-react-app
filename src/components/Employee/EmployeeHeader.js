@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import "../css/Header.css";
+import "../../css/Header.css";
 
-class HeaderComponent extends Component {
+class EmployeeHeader extends Component {
     constructor(props) {
         super(props)
 
@@ -34,18 +34,21 @@ class HeaderComponent extends Component {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/">
+                  <a className="nav-link" href="##">
                     {" "}
                     <i class="fa fa-home mr-2"></i>
-                    Home <span className="sr-only">(current)</span>
+                     My Profile <span className="sr-only">(current)</span>
                   </a>
                 </li>
+
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    <i class="fa fa-search mr-2"></i>
-                    Search
+                  <a className="nav-link" href="/appraisal-report">
+                    <i className="fa fa-form mr-2" />
+                    Create Appraisal
                   </a>
                 </li>
+
+
 
                 <li className="nav-item dropdown">
                   <a
@@ -57,29 +60,32 @@ class HeaderComponent extends Component {
                     aria-expanded="false"
                   >
                     <i class="fa fa-user mr-2"></i>
-                    Logins
+                    Droupdown
                   </a>
                   <div
                     className="dropdown-menu p-2 my-2"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-                    <a className="dropdown-item" href="/authority">
-                      Authority Login
-                    </a>
-                    <a className="dropdown-item" href="/employee">
-                      Employee Login
+
+                    <a className="dropdown-item" href="/">
+                      Something here
                     </a>
                     <a className="dropdown-item" href="/">
-                      Something else here
+                      Something  2
+                    </a>
+                    <a className="dropdown-item" href="/">
+                      Something  3
                     </a>
                   </div>
                 </li>
+
                 <li className="nav-item">
                   <a className="nav-link" href="/">
-                    <i className="fa fa-file mr-2" />
-                    Features
+                    <i class="fa fa-search mr-2"></i>
+                    Search
                   </a>
                 </li>
+
                 <li className="nav-item">
                   <a className="nav-link" href="/contact">
                     {" "}
@@ -96,4 +102,4 @@ class HeaderComponent extends Component {
     }
 }
 
-export default HeaderComponent
+export default EmployeeHeader

@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import ListEmployeeComponent from './components/ListEmployeeComponent';
-import HeaderComponent from './components/HeaderComponent';
+
 import FooterComponent from './components/FooterComponent';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
@@ -17,23 +17,27 @@ import AddEmployee from './components/Admin/AddEmployee';
 import EmployeeDashboard from './components/Employee/EmployeeDashboard';
 import AuthorityDashboard from './components/Authority/AuthorityDashboard';
 import PreviewReport from './components/Authority/PreviewReport';
+import AppraisalReport from './components/Employee/AppraisalReport';
 
 function App() {
   return (
     <div>
         <Router>
-              <HeaderComponent />
-                <div className="container">
+
+
+                <div>
                     <Switch>
                           <Route path = "/" exact component = {Home}></Route>
+
                           <Route path = "/employee-login" exact component = {EmployeeLogin}></Route>
                           <Route path = "/authority-login" exact component = {AuthorityLogin}></Route>
 
                           <Route path = "/admin" exact component = {AdminDashboard}></Route>
                           <Route path = "/addemployee" exact component = {AddEmployee}></Route>
-                          <Route path = "/employee"  component = {EmployeeDashboard}></Route>
+                          <Route path = "/employee-home"  component = {EmployeeDashboard}></Route>
+                          <Route path = "/appraisal-report" exact component = {AppraisalReport}></Route>
 
-                          <Route path = "/authority" exact component = {AuthorityDashboard}></Route>
+                          <Route path = "/auth-home" exact component = {AuthorityDashboard}></Route>
                           <Route path = "/preview" exact component = {PreviewReport}></Route>
 
 

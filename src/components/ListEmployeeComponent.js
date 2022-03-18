@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import EmployeeService from '../services/EmployeeService'
+import AdminHeader from './Admin/AdminHeader';
 
 class ListEmployeeComponent extends Component {
     constructor(props) {
@@ -41,13 +42,16 @@ class ListEmployeeComponent extends Component {
 
     render() {
         return (
-            <div>
+         <>
+         <AdminHeader/>
+
+         <div className='container p-5'>
                  <h2 className="text-center">Employees List </h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addEmployee}> Add Employee</button>
                  </div>
                  <br></br>
-                 <div className = "row">
+                 <div className = " overflow-auto row">
                         <table className = "table table-striped table-bordered">
 
                             <thead>
@@ -55,7 +59,9 @@ class ListEmployeeComponent extends Component {
                                     <th> Employee First Name</th>
                                     <th> Employee Last Name</th>
                                     <th> Employee Email Id</th>
-                                    <th> Actions</th>
+                                    <th> Update</th>
+                                    <th>Delete</th>
+                                    <th>View</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,21 +72,23 @@ class ListEmployeeComponent extends Component {
                                              <td> { employee.firstName} </td>
                                              <td> {employee.lastName}</td>
                                              <td> {employee.emailId}</td>
-                                             <td>
-                                                 <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">View </button>
-                                             </td>
+                                             <td><button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button> </td>
+                                             <td><button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button></td>
+                                             <td><button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">View </button></td>
                                         </tr>
                                     )
                                 }
                             </tbody>
 
                         </table>
-<button onClick={ () => this.cancel()} className="btn btn-info">Back</button>
+
                  </div>
+                <div className='row'>
+                <button onClick={ () => this.cancel()} className="btn btn-danger">Back</button>
+                </div>
 
             </div>
+         </>
         )
     }
 }

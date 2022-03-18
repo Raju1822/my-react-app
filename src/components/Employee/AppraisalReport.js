@@ -14,7 +14,7 @@ class AppraisalReport extends Component {
       <div className="container">
         <div className="card border-0 shadow rounded-3 my-5">
           <div className="text-center p-5">
-            <h2>Appraisal Report</h2>
+            <h2>Create Appraisal Report</h2>
           </div>
 
           <div className="p-5">
@@ -65,12 +65,16 @@ class AppraisalReport extends Component {
                 ></textarea>
               </div>
 
-              <button type="button" className="btn btn-primary m-2">
+              <button type="button" className="btn btn-success m-2">
                 Submit
               </button>
-              <a href="/employee-home" className="btn btn-success mx-4">
+              <a href="/hi" className="btn btn-primary m-4">
+                Preview Report
+              </a>
+              <a href="/employee-home" className="btn btn-danger m-4">
                 Cancel
               </a>
+
             </form>
           </div>
         </div>

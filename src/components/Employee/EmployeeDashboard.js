@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import profile from "../img/avatar.png";
+import EmployeeHeader from "./EmployeeHeader";
 
 class EmployeeDashboard extends Component {
   constructor(props) {
@@ -16,6 +17,9 @@ class EmployeeDashboard extends Component {
   render() {
     return (
       <div>
+
+<EmployeeHeader/>
+
         {/* profile picture  */}
 
         <section className="jumbotron text-center">

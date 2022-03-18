@@ -7,8 +7,10 @@
 font-size: 110%;
 
 }
+
 .nav-item>a:hover{
   background-color: white;
   color:black !important;
+
 }
 
