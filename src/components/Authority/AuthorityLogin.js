@@ -4,10 +4,40 @@ import logo from "../img/logo.jpg";
 
 class AuthorityLogin extends Component {
   constructor(props) {
-    super(props);
+    super(props)
+    this.changeFirstNameHandler = this.changeEmailHandler.bind(this);
+    this.changeLastNameHandler = this.changePasswordHandler.bind(this);
+    this.SubmitForm = this.SubmitForm.bind(this);
 
-    this.state = {};
+    this.state = {
+      emailId: "",
+      password: "",
+
+    };
   }
+
+  changeEmailHandler = (event) => {
+    this.setState({ emailId: event.target.value });
+  };
+  changePasswordHandler = (event) => {
+    this.setState({ password: event.target.value });
+  };
+
+  SubmitForm = (e) => {
+    e.preventDefault();
+    let auth = {
+      emailId: this.state.emailId,
+      password: this.state.password,
+    };
+
+    if(auth.emailId ==="auth@gmail.com" && auth.password ==="1234")
+    {
+      this.props.history.push('/auth-home');
+    }
+    else{
+      alert("Please enter correct Email/Password"+"\n Entered Email:  "+ auth.emailId + "\n Entered Password:  "+ auth.password);
+    }
+  };
 
   render() {
     return (
@@ -32,7 +62,7 @@ class AuthorityLogin extends Component {
                   <h5 className="card-title text-center mb-5 fw-light fs-5">
                     Authority Sign In
                   </h5>
-                  <form action="/auth-home">
+                  <form onSubmit={this.SubmitForm}>
                     <div className="form-floating mb-3">
                       <input
                         type="email"
@@ -40,6 +70,8 @@ class AuthorityLogin extends Component {
                         name="email"
                         placeholder="name@example.com"
                         id="email"
+                        value={this.state.emailId}
+                        onChange={this.changeEmailHandler}
                       />
                       <label for="email">Email address</label>
                     </div>
@@ -50,6 +82,8 @@ class AuthorityLogin extends Component {
                         name="password"
                         placeholder="Password"
                         id="password"
+                        value={this.state.password}
+                        onChange={this.changePasswordHandler}
                       />
                       <label for="password">Password</label>
                     </div>
