@@ -5,9 +5,40 @@ import logo from "./img/logo.jpg"
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.changeFirstNameHandler = this.changeEmailHandler.bind(this);
+    this.changeLastNameHandler = this.changePasswordHandler.bind(this);
+    this.SubmitForm = this.SubmitForm.bind(this);
 
-    this.state = {};
+    this.state = {
+      emailId: "",
+      password: "",
+
+    };
   }
+
+  changeEmailHandler = (event) => {
+    this.setState({ emailId: event.target.value });
+  };
+  changePasswordHandler = (event) => {
+    this.setState({ password: event.target.value });
+  };
+
+  SubmitForm = (e) => {
+    e.preventDefault();
+    let admin = {
+      emailId: this.state.emailId,
+      password: this.state.password,
+    };
+
+    if(admin.emailId ==="a@gmail.com" && admin.password ==="1234")
+    {
+      this.props.history.push('/admin');
+    }
+    else{
+      alert("Please enter correct Email/Password"+"\n Entered Email:  "+ admin.emailId + "\n Entered Password:  "+ admin.password);
+    }
+  };
+
 
 
   render() {
@@ -37,7 +68,8 @@ class Home extends Component {
                   <h5 className="card-title text-center mb-5 fw-light fs-5">
                     Admin Sign In
                   </h5>
-                  <form action="/admin">
+
+                  <form onSubmit={this.SubmitForm} >
                     <div className="form-floating mb-3">
                       <input
                         type="email"
@@ -45,6 +77,9 @@ class Home extends Component {
                         name="email"
                         placeholder="name@example.com"
                         id="email"
+                        required
+                        value={this.state.emailId}
+                  onChange={this.changeEmailHandler}
                       />
                       <label for="email">Email address</label>
                     </div>
@@ -55,6 +90,10 @@ class Home extends Component {
                         name="password"
                         placeholder="Password"
                         id="password"
+                        required
+
+                        value={this.state.password}
+                  onChange={this.changePasswordHandler}
                       />
                       <label for="password">Password</label>
                     </div>
@@ -65,6 +104,7 @@ class Home extends Component {
                         type="checkbox"
                         value=""
                         id="rememberPasswordCheck"
+
                       />
                       <label
                         className="form-check-label"

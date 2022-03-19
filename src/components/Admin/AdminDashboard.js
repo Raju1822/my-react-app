@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import AdminService from "../../services/AdminService";
 import "../../css/AdminDashboard.css";
 import Admin from "../img/admin.png";
-import StaffService from "../../services/StaffService";
+
 import AdminHeader from "./AdminHeader";
+import EmployeeService from "../../services/EmployeeService";
 class AdminDashboard extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +20,7 @@ class AdminDashboard extends Component {
   deleteEmployee(employeeId){
     // alert("Hell" + employeeId);
     // return axios.delete(EMPLOYEE_API_BASE_URL + '/' + employeeId);
-    StaffService.deleteEmployeebyId(employeeId);
+    EmployeeService.deleteEmployeebyId(employeeId);
     alert("Employee of id " + employeeId + " is removed");
     window.location.reload();
 }
@@ -34,7 +35,7 @@ viewEmployee(employeeId){
     AdminService.getAdmin().then((res) => {
       this.setState({ admin: res.data });
     });
-    StaffService.getAllStaff().then((res) => {
+    EmployeeService.getEmployees().then((res) => {
       this.setState({ staff: res.data });
     });
   }

@@ -41,6 +41,10 @@ class ViewEmployeeComponent extends Component {
                         <thead></thead>
 
                         <tbody>
+                        <tr>
+                            <td> Employee id: </td>
+                            <td>{ this.state.employees.id }</td>
+                          </tr>
 
                           <tr>
                             <td> Employee First Name: </td>

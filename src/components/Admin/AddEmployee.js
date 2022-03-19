@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import StaffService from "../../services/StaffService";
+import EmployeeService from "../../services/EmployeeService";
+
 
 class AddEmployee extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class AddEmployee extends Component {
       salary: this.state.salary,
     };
     console.log("employee => " + JSON.stringify(employee));
-    StaffService.createEmployee(employee);
+    EmployeeService.createEmployee(employee);
     window.location.href = "/admin";
     alert("Employee addedd successfuly..!");
   };
