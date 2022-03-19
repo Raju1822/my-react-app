@@ -18,6 +18,7 @@ import EmployeeDashboard from './components/Employee/EmployeeDashboard';
 import AuthorityDashboard from './components/Authority/AuthorityDashboard';
 import PreviewReport from './components/Authority/PreviewReport';
 import AppraisalReport from './components/Employee/AppraisalReport';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
                           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
 
                           <Route path = "/contact" component = {Contact}></Route>
+                          <Route path = "/search" component = {Search}></Route>
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
                     </Switch>
                 </div>
