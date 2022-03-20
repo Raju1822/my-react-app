@@ -35,7 +35,8 @@ class EmployeeLogin extends Component {
       this.props.history.push('/employee-home');
     }
     else{
-      alert("Please enter correct Email/Password"+"\n Entered Email:  "+ employee.emailId + "\n Entered Password:  "+ employee.password);
+      alert("Please enter correct Email/Password");
+      // alert("Please enter correct Email/Password"+"\n Entered Email:  "+ employee.emailId + "\n Entered Password:  "+ employee.password);
     }
   };
 
