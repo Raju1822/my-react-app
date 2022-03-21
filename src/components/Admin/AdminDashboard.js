@@ -20,7 +20,7 @@ class AdminDashboard extends Component {
   deleteEmployee(employeeId){
     // alert("Hell" + employeeId);
     // return axios.delete(EMPLOYEE_API_BASE_URL + '/' + employeeId);
-    EmployeeService.deleteEmployeebyId(employeeId);
+    EmployeeService.deleteEmployee(employeeId);
     alert("Employee of id " + employeeId + " is removed");
     window.location.reload();
 }

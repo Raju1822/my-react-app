@@ -14,6 +14,9 @@ class AddEmployee extends Component {
       emailId: "",
       password: "",
       salary: "",
+      mobile: "",
+      gender: "",
+      doj:"",
     };
   }
   changeFirstNameHandler = (event) => {
@@ -31,6 +34,16 @@ class AddEmployee extends Component {
   changeSalaryHandler = (event) => {
     this.setState({ salary: event.target.value });
   };
+  changeMobileHandler = (event) => {
+    this.setState({ mobile: event.target.value });
+  };
+  changeGenderHandler = (event) => {
+    this.setState({ gender: event.target.value });
+  };
+  changeDojHandler = (event) => {
+    this.setState({ doj: event.target.value });
+  };
+
   SubmitForm = (e) => {
     // alert("hello"+ employee.firstName );
     // axios.post('http://localhost:8080/api/staff', employee)
@@ -42,6 +55,9 @@ class AddEmployee extends Component {
       emailId: this.state.emailId,
       password: this.state.password,
       salary: this.state.salary,
+      mobile: this.state.mobile,
+      gender: this.state.gender,
+      doj: this.state.doj,
     };
     console.log("employee => " + JSON.stringify(employee));
     EmployeeService.createEmployee(employee);
@@ -196,9 +212,43 @@ class AddEmployee extends Component {
                 />
               </div>
               <div className="form-group">
+                <label> Gender: </label>
+                <input
+                  placeholder="Male/Female"
+                  name="gender"
+                  className="form-control"
+                  required
+                  value={this.state.gender}
+                  onChange={this.changeGenderHandler}
+                />
+                </div>
+                <div className="form-group">
+                <label> Mobile No.: </label>
+                <input
+                  placeholder="Mobile"
+                  name="mobile"
+                  className="form-control"
+                  required
+                  value={this.state.mobile}
+                  onChange={this.changeMobileHandler}
+                />
+              </div>
+              <div className="form-group">
+                <label> Date of Joining: </label>
+                <input
+                type="date"
+                  placeholder="Enter Date"
+                  name="doj"
+                  className="form-control"
+                  required
+                  value={this.state.doj}
+                  onChange={this.changeDojHandler}
+                />
+                </div>
+              <div className="form-group">
                 <label> Salary: </label>
                 <input
-                  placeholder="password"
+                  placeholder="Salary"
                   name="salary"
                   className="form-control"
                   required

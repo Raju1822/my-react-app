@@ -30,7 +30,7 @@ class ViewEmployeeComponent extends Component {
       <div className="container">
         <div className="card border-0 shadow rounded-3 my-5">
         <h3 className = "text-center pt-5"> View Employee Details</h3>
-          <div className="text-center p-5">
+          <div className="text-center p-2">
            <img src={avatar} alt="profile-pic" width="15%"/>
            <h5>Hi..!  { this.state.employees.firstName }  { this.state.employees.lastName }</h5>
           </div>
@@ -59,6 +59,11 @@ class ViewEmployeeComponent extends Component {
                           <tr>
                             <td> Employee Email Id: </td>
                             <td>{ this.state.employees.emailId }</td>
+                          </tr>
+
+                          <tr>
+                            <td> Date of Joining: </td>
+                            <td>{ this.state.employees.doj }</td>
                           </tr>
 
                           <tr>
