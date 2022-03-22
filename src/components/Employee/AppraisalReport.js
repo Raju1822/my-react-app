@@ -6,16 +6,348 @@ class AppraisalReport extends Component {
     this.state = {
    a1: "",
    a2: "",
-
+   b1: "",
+   b2: "",
+   b3:"",
+   b4:"",
+   b5:"",
+   b6:"",
+   b7:"",
+   c1: "",
+   c2: "",
+   c3:"",
+   c4:"",
+   c5:"",
+   c6:"",
+   c7:"",
+   d1: "",
+   d2: "",
+   d3:"",
+   d4:"",
+   d5:"",
+   d6:"",
+   d7:"",
+   d8:"",
+   d9:"",
+   d10:"",
+   d11: "",
+   d12: "",
+   d13:"",
+   d14:"",
+   d15:"",
+   d16:"",
+   d17:"",
+   d18:"",
+   d19:"",
+   d20:"",
+   d21: "",
+   d22: "",
+   d23:"",
+   d24:"",
+   d25:"",
+   d26:"",
+   d27:"",
+   d28:"",
+   d29:"",
+   d30:"",
+   d31: "",
+   d32: "",
+   d33:"",
+   d34:"",
+   d35:"",
+   d36:"",
+   d37:"",
+   d38:"",
+   d39:"",
+   d40:"",
+   d41: "",
+   d42: "",
+   d43:"",
+   d44:"",
+   d45:"",
+   d46:"",
+   e1: "",
+   e2: "",
+   e3:"",
+   e4:"",
+   e5:"",
+   e6:"",
+   e7:"",
+   e8:"",
+   e9:"",
+   e10:"",
+   e11: "",
+   e12: "", 
+   f1: "",
+   f2: "",
+   f3:"",
+   f4:"",
+   f5:"",
+   f6:"",
+   f7:"",
+   f8:"",
+   f9:"",
+   f10:"",
+   f11: "",
     };
   }
 
 
-  changeA1Handler= (event) => {
+changeA1Handler= (event) => {
     this.setState({a1: event.target.value});
 }
-
-
+changeA2Handler= (event) => {
+    this.setState({a2: event.target.value});
+}
+changeB1Handler= (event) => {
+    this.setState({b1: event.target.value});
+}
+changeB2Handler= (event) => {
+    this.setState({b2: event.target.value});
+}
+changeB3Handler= (event) => {
+    this.setState({b3: event.target.value});
+}
+changeB4Handler= (event) => {
+    this.setState({b4: event.target.value});
+}
+changeB5Handler= (event) => {
+    this.setState({b5: event.target.value});
+}
+changeB6Handler= (event) => {
+    this.setState({b6: event.target.value});
+}
+changeB7Handler= (event) => {
+    this.setState({b7: event.target.value});
+}
+changeC1Handler= (event) => {
+    this.setState({c1: event.target.value});
+}
+changeC2Handler= (event) => {
+    this.setState({c2: event.target.value});
+}
+changeC3Handler= (event) => {
+    this.setState({c3: event.target.value});
+}
+changeC4Handler= (event) => {
+    this.setState({c4: event.target.value});
+}
+changeC5Handler= (event) => {
+    this.setState({c5: event.target.value});
+}
+changeC6Handler= (event) => {
+    this.setState({c6: event.target.value});
+}
+changeC7Handler= (event) => {
+    this.setState({c7: event.target.value});
+}
+changeD1Handler= (event) => {
+    this.setState({d1: event.target.value});
+}
+changeD2Handler= (event) => {
+    this.setState({d2: event.target.value});
+}
+changeD3Handler= (event) => {
+    this.setState({d3: event.target.value});
+}
+changeD4Handler= (event) => {
+    this.setState({d4: event.target.value});
+}
+changeD5Handler= (event) => {
+    this.setState({d5: event.target.value});
+}
+changeD6Handler= (event) => {
+    this.setState({d6: event.target.value});
+}
+changeD7Handler= (event) => {
+    this.setState({d7: event.target.value});
+}
+changeD8Handler= (event) => {
+    this.setState({d8: event.target.value});
+}
+changeD9Handler= (event) => {
+    this.setState({d9: event.target.value});
+}
+changeD10Handler= (event) => {
+    this.setState({d10: event.target.value});
+}
+changeD11Handler= (event) => {
+    this.setState({d11: event.target.value});
+}
+changeD12Handler= (event) => {
+    this.setState({d12: event.target.value});
+}
+changeD13Handler= (event) => {
+    this.setState({d13: event.target.value});
+}
+changeD14Handler= (event) => {
+    this.setState({d14: event.target.value});
+}
+changeD15Handler= (event) => {
+    this.setState({d15: event.target.value});
+}
+changeD16Handler= (event) => {
+    this.setState({d16: event.target.value});
+}
+changeD17Handler= (event) => {
+    this.setState({d17: event.target.value});
+}
+changeD18Handler= (event) => {
+    this.setState({d18: event.target.value});
+}
+changeD19Handler= (event) => {
+    this.setState({d19: event.target.value});
+}
+changeD20Handler= (event) => {
+    this.setState({d20: event.target.value});
+}
+changeD21Handler= (event) => {
+    this.setState({d21: event.target.value});
+}
+changeD22Handler= (event) => {
+    this.setState({d22: event.target.value});
+}
+changeD23Handler= (event) => {
+    this.setState({d23: event.target.value});
+}
+changeD24Handler= (event) => {
+    this.setState({d24: event.target.value});
+}
+changeD25Handler= (event) => {
+    this.setState({d25: event.target.value});
+}
+changeD26Handler= (event) => {
+    this.setState({d26: event.target.value});
+}
+changeD27Handler= (event) => {
+    this.setState({d27: event.target.value});
+}
+changeD28Handler= (event) => {
+    this.setState({d28: event.target.value});
+}
+changeD29Handler= (event) => {
+    this.setState({d29: event.target.value});
+}
+changeD30Handler= (event) => {
+    this.setState({d30: event.target.value});
+}
+changeD31Handler= (event) => {
+    this.setState({d31: event.target.value});
+}
+changeD32Handler= (event) => {
+    this.setState({d32: event.target.value});
+}
+changeD33Handler= (event) => {
+    this.setState({d33: event.target.value});
+}
+changeD34Handler= (event) => {
+    this.setState({d34: event.target.value});
+}
+changeD35Handler= (event) => {
+    this.setState({d35: event.target.value});
+}
+changeD36Handler= (event) => {
+    this.setState({d36: event.target.value});
+}
+changeD37Handler= (event) => {
+    this.setState({d37: event.target.value});
+}
+changeD38Handler= (event) => {
+    this.setState({d38: event.target.value});
+}
+changeD39Handler= (event) => {
+    this.setState({d39: event.target.value});
+}
+changeD40Handler= (event) => {
+    this.setState({d40: event.target.value});
+}
+changeD41Handler= (event) => {
+    this.setState({d41: event.target.value});
+}
+changeD42Handler= (event) => {
+    this.setState({d42: event.target.value});
+}
+changeD43Handler= (event) => {
+    this.setState({d43: event.target.value});
+}
+changeD4Handler= (event) => {
+    this.setState({d44: event.target.value});
+}
+changeD45Handler= (event) => {
+    this.setState({d45: event.target.value});
+}
+changeD46Handler= (event) => {
+    this.setState({d46: event.target.value});
+}
+changeE1Handler= (event) => {
+    this.setState({e1: event.target.value});
+}
+changeE2Handler= (event) => {
+    this.setState({e2: event.target.value});
+}
+changeE3Handler= (event) => {
+    this.setState({e3: event.target.value});
+}
+changeE4Handler= (event) => {
+    this.setState({e4: event.target.value});
+}
+changeE5Handler= (event) => {
+    this.setState({e5: event.target.value});
+}
+changeE6Handler= (event) => {
+    this.setState({e6: event.target.value});
+}
+changeE7Handler= (event) => {
+    this.setState({e7: event.target.value});
+}
+changeE8Handler= (event) => {
+    this.setState({e8: event.target.value});
+}
+changeE9Handler= (event) => {
+    this.setState({e9: event.target.value});
+}
+changeE10Handler= (event) => {
+    this.setState({e10: event.target.value});
+}
+changeE11Handler= (event) => {
+    this.setState({e11: event.target.value});
+}
+changeE12Handler= (event) => {
+    this.setState({e12: event.target.value});
+}
+changeF1Handler= (event) => {
+    this.setState({f1: event.target.value});
+}
+changeF2Handler= (event) => {
+    this.setState({f2: event.target.value});
+}
+changeF3Handler= (event) => {
+    this.setState({f3: event.target.value});
+}
+changeF4Handler= (event) => {
+    this.setState({f4: event.target.value});
+}
+changeF5Handler= (event) => {
+    this.setState({f5: event.target.value});
+}
+changeF6Handler= (event) => {
+    this.setState({f6: event.target.value});
+}
+changeF7Handler= (event) => {
+    this.setState({f7: event.target.value});
+}
+changeF8Handler= (event) => {
+    this.setState({f8: event.target.value});
+}
+changeF9Handler= (event) => {
+    this.setState({f9: event.target.value});
+}
+changeF10Handler= (event) => {
+    this.setState({f10: event.target.value});
+}
+changeF11Handler= (event) => {
+    this.setState({f11: event.target.value});
+}
 
 
   SubmitForm() {
@@ -67,7 +399,7 @@ class AppraisalReport extends Component {
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Report for the year / period ending:</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" name="a2" />
+                    <input type="text" class="form-control" name="a2" value={this.state.a2} onChange={this.changeA2Handler}/>
                   </div>
                 </div>
               </div>
@@ -90,13 +422,13 @@ class AppraisalReport extends Component {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">1.   Name of Officer </label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="b1" />
+                            <input type="text" class="form-control" name="b1" value={this.state.b1} onChange={this.changeB1Handler}/>
                         </div>
                     </div>
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label">2.   Date of Birth (DD/MM/YY)</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" name="b2" />
+                        <input type="text" class="form-control" name="b2" value={this.state.b2} onChange={this.changeB2Handler}/>
                       </div>
                     </div>
 
@@ -105,22 +437,22 @@ class AppraisalReport extends Component {
                             To the present grade  </label>
                         <label class="col-sm-2 col-form-label">Date</label>
                         <div class="col-sm-2">
-                          <input type="text" class="form-control" name="b3" />
+                          <input type="text" class="form-control" name="b3" value={this.state.b3} onChange={this.changeB3Handler}/>
                         </div>
                         <label class="col-sm-2 col-form-label">Grade</label>
                         <div class="col-sm-2">
-                          <input type="text" class="form-control" name="b4" />
+                          <input type="text" class="form-control" name="b4" value={this.state.b4} onChange={this.changeB4Handler}/>
                         </div>
                     </div>
                     <div class="form-group row">4. Present post and date of appointment
                         thereto
                         <label class="col-sm-2 col-form-label">Post</label>
                         <div class="col-sm-2">
-                          <input type="text" class="form-control" name="b5" />
+                          <input type="text" class="form-control" name="b5" value={this.state.b5} onChange={this.changeB5Handler}/>
                         </div>
                         <label class="col-sm-2 col-form-label">Date</label>
                         <div class="col-sm-2">
-                          <input type="text" class="form-control" name="b6" />
+                          <input type="text" class="form-control" name="b6" value={this.state.b6} onChange={this.changeB6Handler}/>
                         </div>
 
                     </div>
@@ -129,7 +461,7 @@ class AppraisalReport extends Component {
                             leave etc.) during the year. If he has under
                             gone training, specify</label>
                         <div class="col-sm-4">
-                          <input type="text" class="form-control" name="b7"/>
+                          <input type="text" class="form-control" name="b7"value={this.state.b7} onChange={this.changeB7Handler}/>
                         </div>
                     </div>
               </div>
@@ -149,7 +481,7 @@ class AppraisalReport extends Component {
                 {/* {/<!-- Part -2 ( part - 1) -->/} */}
                   <div class="form-group">
                       <label for="c1">1.   Brief description of duties</label>
-                      <textarea class="form-control" name="c1" rows="3"></textarea>
+                      <textarea class="form-control" name="c1" rows="3" value={this.state.c1} onChange={this.changeC1Handler}></textarea>
                   </div>
 
 {/*    {/<!-- Part -2 ( part - 2) -->/} */}
@@ -167,12 +499,12 @@ class AppraisalReport extends Component {
                         <tr>
                             <td>
                                 <div class="form-group">
-                                    <textarea class="form-control" name="c2" rows="3"></textarea>
+                                    <textarea class="form-control" name="c2" rows="3" value={this.state.c2} onChange={this.changeC2Handler}></textarea>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-group">
-                                    <textarea class="form-control" name="c3" rows="3"></textarea>
+                                    <textarea class="form-control" name="c3" rows="3" value={this.state.c3} onChange={this.changeC3Handler}></textarea>
                                 </div>
                             </td>
                         </tr>
@@ -186,13 +518,13 @@ class AppraisalReport extends Component {
                           referred to in item 2. Please specify constraints, if any, in achieving the targets.
                       </p>
                       <div class="form-group">
-                          <textarea class="form-control" name="c4" rows="3"></textarea>
+                          <textarea class="form-control" name="c4" rows="3" value={this.state.c4} onChange={this.changeC4Handler}></textarea>
                       </div>
                       <p>(B)   Please also indicate items in which there have been significantly higher
                           achievements and your contribution thereto.
                       </p>
                       <div class="form-group">
-                          <textarea class="form-control" name="c5" rows="3"></textarea>
+                          <textarea class="form-control" name="c5" rows="3" value={this.state.c5} onChange={this.changeC5Handler}></textarea>
                       </div>
 
                   </div>
@@ -205,14 +537,14 @@ class AppraisalReport extends Component {
 
                       </p>
                       <div class="form-group">
-                          <textarea class="form-control" name="c6" rows="3"></textarea>
+                          <textarea class="form-control" name="c6" rows="3" value={this.state.c6} onChange={this.changeC6Handler}></textarea>
                       </div>
                   </div>
                   <div class="form-group row">
                       <label class="col-sm-3 col-form-label">
                           Signature of officer reported upon </label>
                       <div class="col-sm-4">
-                          <input type="text" class="form-control" name="c7" />
+                          <input type="text" class="form-control" name="c7" value={this.state.c7} onChange={this.changeC7Handler}/>
                       </div>
                   </div>
 
@@ -272,12 +604,12 @@ class AppraisalReport extends Component {
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d1" rows="1"></textarea>
+                                              <textarea class="form-control" name="d1" rows="1" value={this.state.d1} onChange={this.changeD1Handler}></textarea>
                                           </div>
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d2" rows="1"></textarea>
+                                              <textarea class="form-control" name="d2" rows="1" value={this.state.d2} onChange={this.changeD2Handler}></textarea>
                                           </div>
                                       </td>
                                   </tr>
@@ -287,12 +619,12 @@ class AppraisalReport extends Component {
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d3" rows="1"></textarea>
+                                              <textarea class="form-control" name="d3" rows="1" value={this.state.d3} onChange={this.changeD3Handler}></textarea>
                                           </div>
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d4" rows="1"></textarea>
+                                              <textarea class="form-control" name="d4" rows="1" value={this.state.d4} onChange={this.changeD4Handler}></textarea>
                                           </div>
                                       </td>
                                   </tr>
@@ -302,12 +634,12 @@ class AppraisalReport extends Component {
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d5" rows="1"></textarea>
+                                              <textarea class="form-control" name="d5" rows="1" value={this.state.d5} onChange={this.changeD5Handler}></textarea>
                                           </div>
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d6" rows="1"></textarea>
+                                              <textarea class="form-control" name="d6" rows="1" value={this.state.d6} onChange={this.changeD6Handler}></textarea>
                                           </div>
                                       </td>
                                   </tr>
@@ -318,12 +650,12 @@ class AppraisalReport extends Component {
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d7" rows="1"></textarea>
+                                              <textarea class="form-control" name="d7" rows="1" value={this.state.d7} onChange={this.changeD7Handler}></textarea>
                                           </div>
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d8" rows="1"></textarea>
+                                              <textarea class="form-control" name="d8" rows="1"value={this.state.d8} onChange={this.changeD8Handler}></textarea>
                                           </div>
                                       </td>
                                   </tr>
@@ -333,12 +665,12 @@ class AppraisalReport extends Component {
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d9" rows="1"></textarea>
+                                              <textarea class="form-control" name="d9" rows="1" value={this.state.d9} onChange={this.changeD9Handler}></textarea>
                                           </div>
                                       </td>
                                       <td>
                                           <div class="form-group">
-                                              <textarea class="form-control" name="d10" rows="1"></textarea>
+                                              <textarea class="form-control" name="d10" rows="1" value={this.state.d10} onChange={this.changeD10Handler}></textarea>
                                           </div>
                                       </td>
                                   </tr>
@@ -364,12 +696,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d11" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d11" rows="1"value={this.state.d11} onChange={this.changeD11Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d12" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d12" rows="1"value={this.state.d12} onChange={this.changeD12Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -379,12 +711,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d13" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d13" rows="1"value={this.state.d13} onChange={this.changeD13Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d14" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d14" rows="1"value={this.state.d14} onChange={this.changeD14Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -394,12 +726,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d15" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d15" rows="1"value={this.state.d15} onChange={this.changeD15Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d16" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d16" rows="1"value={this.state.d16} onChange={this.changeD16Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -409,12 +741,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d17" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d17" rows="1" value={this.state.d17} onChange={this.changeD17Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d18" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d18" rows="1" value={this.state.d18} onChange={this.changeD18Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -424,12 +756,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d19" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d19" rows="1" value={this.state.d19} onChange={this.changeD19Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d20" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d20" rows="1" value={this.state.d20} onChange={this.changeD20Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -439,12 +771,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d21" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d21" rows="1" value={this.state.d21} onChange={this.changeD21Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d22" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d22" rows="1" value={this.state.d22} onChange={this.changeD22Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -454,12 +786,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d23" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d23" rows="1" value={this.state.d23} onChange={this.changeD23Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d24" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d24" rows="1" value={this.state.d24} onChange={this.changeD24Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -469,12 +801,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d25" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d25" rows="1" value={this.state.d25} onChange={this.changeD25Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d26" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d26" rows="1" value={this.state.d26} onChange={this.changeD26Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -484,12 +816,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d27" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d27" rows="1" value={this.state.d27} onChange={this.changeD27Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d28" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d28" rows="1" value={this.state.d28} onChange={this.changeD28Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -499,12 +831,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d29" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d29" rows="1"value={this.state.d29} onChange={this.changeD29Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d30" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d30" rows="1" value={this.state.d30} onChange={this.changeD30Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -533,12 +865,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d31" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d31" rows="1" value={this.state.d31} onChange={this.changeD31Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d32" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d32" rows="1" value={this.state.d32} onChange={this.changeD32Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -550,12 +882,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d33" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d33" rows="1" value={this.state.d33} onChange={this.changeD33Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d34" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d34" rows="1" value={this.state.d34} onChange={this.changeD34Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -565,12 +897,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d35" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d35" rows="1" value={this.state.d35} onChange={this.changeD35Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d36" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d36" rows="1" value={this.state.d36} onChange={this.changeD36Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -580,12 +912,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d37" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d37" rows="1" value={this.state.d37} onChange={this.changeD37Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d38" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d38" rows="1" value={this.state.d38} onChange={this.changeD38Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -595,12 +927,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d39" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d39" rows="1" value={this.state.d39} onChange={this.changeD39Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d40" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d40" rows="1" value={this.state.d40} onChange={this.changeD40Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -610,12 +942,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d41" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d41" rows="1" value={this.state.d41} onChange={this.changeD41Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d42" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d42" rows="1" value={this.state.d42} onChange={this.changeD42Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -626,12 +958,12 @@ class AppraisalReport extends Component {
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d43" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d43" rows="1" value={this.state.d43} onChange={this.changeD43Handler}></textarea>
                                               </div>
                                           </td>
                                           <td>
                                               <div class="form-group">
-                                                  <textarea class="form-control" name="d44" rows="1"></textarea>
+                                                  <textarea class="form-control" name="d44" rows="1" value={this.state.d44} onChange={this.changeD44Handler}></textarea>
                                               </div>
                                           </td>
                                       </tr>
@@ -642,14 +974,14 @@ class AppraisalReport extends Component {
                                   <label class="col-sm-3 col-form-label">
                                       Signature of Reporting officer </label>
                                   <div class="col-sm-4">
-                                      <input type="text" class="form-control" name="d45" />
+                                      <input type="text" class="form-control" name="d45" value={this.state.d45} onChange={this.changeD45Handler}/>
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="col-sm-3 col-form-label">
                                       Signature of the Reviewing Officer</label>
                                   <div class="col-sm-4">
-                                      <input type="text" class="form-control" name="d46" />
+                                      <input type="text" class="form-control" name="d46"value={this.state.d46} onChange={this.changeD46Handler} />
                                   </div>
                               </div>
 
@@ -673,27 +1005,27 @@ class AppraisalReport extends Component {
                           <p>1.   Relations with the public (wherever applicable)</p>
                           <p>(Please comment on the Officer’s accessibility to the public and responsiveness to their needs)</p>
                           <div class="form-group">
-                              <textarea class="form-control" name="e1" rows="3"></textarea>
+                              <textarea class="form-control" name="e1" rows="3" value={this.state.e1} onChange={this.changeE1Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part -4 (part 2) -->/} */}
                           <p>2.   Training</p>
                           <p>(Please give recommendations for training with a view to further improving the effectiveness and capabilities of the Officer)</p>
                           <div class="form-group">
-                              <textarea class="form-control" name="e2" rows="1"></textarea>
+                              <textarea class="form-control" name="e2" rows="1" value={this.state.e2} onChange={this.changeE2Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part -4 (part 3) -->/} */}
                           <p>3.   State of health</p>
                           <div class="form-group">
-                              <textarea class="form-control" name="e3" rows="2"></textarea>
+                              <textarea class="form-control" name="e3" rows="2" value={this.state.e3} onChange={this.changeE3Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part -4 (part 4) -->/} */}
                           <p>4.   Integrity </p>
                           <p>(Please comment on the integrity of the Officer)</p>
                           <div class="form-group">
-                              <textarea class="form-control" name="e4" rows="2"></textarea>
+                              <textarea class="form-control" name="e4" rows="2" value={this.state.e4} onChange={this.changeE4Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part -4 (part 5) -->/} */}
@@ -703,55 +1035,55 @@ class AppraisalReport extends Component {
                               failures (ref: 3(A) and 3(B)of Part-2) and attitude towards weaker sections.
                           </p>
                           <div class="form-group">
-                              <textarea class="form-control" name="e5" rows="4"></textarea>
+                              <textarea class="form-control" name="e5" rows="4" value={this.state.e5} onChange={this.changeE5Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part -4 (part 6) -->/} */}
                           <p>6.   Overall numerical grading on the basis of weightage given in section A,B and C in part-3 of the report</p>
                           <div class="form-group">
-                              <textarea class="form-control" name="e6" rows="1"></textarea>
+                              <textarea class="form-control" name="e6" rows="1" value={this.state.e6} onChange={this.changeE6Handler}></textarea>
                           </div>
 
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Signature of the Reporting Officer </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="e7" />
+                                  <input type="text" class="form-control" name="e7" value={this.state.e7} onChange={this.changeE7Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Name in Block Letters: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="e8" />
+                                  <input type="text" class="form-control" name="e8" value={this.state.e8} onChange={this.changeE8Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Designation: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="e9" />
+                                  <input type="text" class="form-control" name="e9" value={this.state.e9} onChange={this.changeE9Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   During the period of Report: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="e10" />
+                                  <input type="text" class="form-control" name="e10" value={this.state.e10} onChange={this.changeE10Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Place : </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="e11" />
+                                  <input type="text" class="form-control" name="e11" value={this.state.e11} onChange={this.changeE11Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Date: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="e12" />
+                                  <input type="text" class="form-control" name="e12" value={this.state.e12} onChange={this.changeE12Handler}/>
                               </div>
                           </div>
                       </div>
@@ -769,7 +1101,7 @@ class AppraisalReport extends Component {
                           <p>1.   REMARKS OF THE REVIEWING OFFICER</p>
                           <p>Length of service under the Reviewing Officer</p>
                           <div class="form-group">
-                              <textarea class="form-control" name="f1" rows="1"></textarea>
+                              <textarea class="form-control" name="f1" rows="1" value={this.state.f1} onChange={this.changeF1Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part - 5(part 2) -->/} */}
@@ -782,13 +1114,13 @@ class AppraisalReport extends Component {
                               column provided for you in that section and initials your entries.)
                           </p>
                           <div class="form-group">
-                              <textarea class="form-control" name="f2" rows="1"></textarea>
+                              <textarea class="form-control" name="f2" rows="1" value={this.state.f2} onChange={this.changeF2Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part - 5(part 3) -->/} */}
                           <p>3.   In case of disagreement, please specify the reasons. Is there anything you wish to modify or add? </p>
                           <div class="form-group">
-                              <textarea class="form-control" name="f3" rows="2"></textarea>
+                              <textarea class="form-control" name="f3" rows="2" value={this.state.f3} onChange={this.changeF3Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part -5 (part 4) -->/} */}
@@ -797,56 +1129,56 @@ class AppraisalReport extends Component {
                               sections.
                           </p>
                           <div class="form-group">
-                              <textarea class="form-control" name="f4" rows="2"></textarea>
+                              <textarea class="form-control" name="f4" rows="2" value={this.state.f4} onChange={this.changeF4Handler}></textarea>
                           </div>
 
                           {/* {/<!-- Part -5 (part 5) -->/} */}
                           <p>5.   Overall numerical grading on the basis of weightage given in section- A, section- B and
                               section- C in part-3 of the report</p>
                           <div class="form-group">
-                              <textarea class="form-control" name="f5" rows="1"></textarea>
+                              <textarea class="form-control" name="f5" rows="1"value={this.state.f5} onChange={this.changeF5Handler}></textarea>
                           </div>
 
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Signature of the Reviewing Officer </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="f6" />
+                                  <input type="text" class="form-control" name="f6" value={this.state.f6} onChange={this.changeF6Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Name in Block Letters: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="f7" />
+                                  <input type="text" class="form-control" name="f7" value={this.state.f7} onChange={this.changeF7Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Designation: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="f8" />
+                                  <input type="text" class="form-control" name="f8" value={this.state.f8} onChange={this.changeF8Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   During the period of Report: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="f9" />
+                                  <input type="text" class="form-control" name="f9" value={this.state.f9} onChange={this.changeF9Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Place : </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="f10" />
+                                  <input type="text" class="form-control" name="f10" value={this.state.f10} onChange={this.changeF10Handler}/>
                               </div>
                           </div>
                           <div class="form-group row">
                               <label class="col-sm-3 col-form-label">
                                   Date: </label>
                               <div class="col-sm-4">
-                                  <input type="text" class="form-control" name="f11" />
+                                  <input type="text" class="form-control" name="f11" value={this.state.f11} onChange={this.changeF11Handler}/>
                               </div>
                           </div>
 
