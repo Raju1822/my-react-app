@@ -38,13 +38,14 @@ viewEmployee(employeeId){
     EmployeeService.getEmployees().then((res) => {
       this.setState({ staff: res.data });
     });
+
+    EmployeeService.getEmployees().then(res => {
+        const persons = res.data;
+        const longeur = res.data.length;
+        this.setState({ persons, longeur });
+      })
   }
-  // Handlelogout = () => {
-  //   this.setState({
-  //     sessionToken: '',
-  //   });
-  //   localStorage.clear();
-  // }
+
   render() {
     return (
       <>
@@ -58,6 +59,7 @@ viewEmployee(employeeId){
               <h1 className="jumbotron-heading ">
                 <img src={Admin} alt="profile-pic" />
               </h1>
+
               <div className="lead ">
                 {this.state.admin.map((adm) => (
                   <p key={adm.id}>
@@ -123,7 +125,7 @@ viewEmployee(employeeId){
                       <p className="card-text">
                         <i className="fa fa-users fa-3x"></i>
                       </p>
-                      <p>100</p>
+                       <p> { this.state.longeur}</p>
                     </div>
                     <div className="bg-warning text-white">
                       <p>Total Employess</p>

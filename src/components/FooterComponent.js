@@ -12,7 +12,7 @@ class FooterComponent extends Component {
     render() {
         return (
             <div className='container'>
-                <footer className = "text-center footer">
+                <footer className = "text-center footer p-4">
                     <span className="text-muted ">All Rights Reserved @Raju_Sahu 2022</span>
                 </footer>
             </div>

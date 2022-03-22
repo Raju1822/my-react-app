@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import logo from "./img/logo.jpg"
+import avatar from "./img/admin.png"
 
 class Home extends Component {
   constructor(props) {
@@ -52,20 +53,21 @@ class Home extends Component {
 
         <div className="container">
         <div class="row">
-          <div class="col-sm-6">
-            <div className="col-md-8 text-center display-6 my-4 ">
-              <img className="img-fluid" src={logo} alt="profile" />
-              <p>National Institute of Technology </p>
-              <p> Raipur</p>
+        <div class="col-sm-8">
+            <div className="col-md-8 text-center display-6 pt-5 ">
+              <img className="img-fluid" src={logo} alt="pictures" width="60%"/>
+              <p className="pt-3">National Institute of Technology </p>
+              <p>Raipur</p>
             </div>
           </div>
 
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div className="text-center my-2">
-              <h1 className="display-5">Admin Portal</h1>
+              <h1 className="display-4">Admin Portal</h1>
 
-              <div className="card border-0 shadow rounded-3 my-5 ">
+              <div className="card border-0 shadow rounded-3 my-4 ">
                 <div className="card-body p-4 p-sm-5 ">
+                <img src={avatar} alt="profile-pic" width="25%"/>
                   <h5 className="card-title text-center mb-5 fw-light fs-5">
                     Admin Sign In
                   </h5>

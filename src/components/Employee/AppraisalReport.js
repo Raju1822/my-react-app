@@ -3,8 +3,21 @@ class AppraisalReport extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+   a1: "",
+   a2: "",
+
+    };
   }
+
+
+  changeA1Handler= (event) => {
+    this.setState({a1: event.target.value});
+}
+
+
+
+
   SubmitForm() {
     alert("Form is submitted");
   }
@@ -47,7 +60,8 @@ class AppraisalReport extends Component {
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Name of Officer:</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" name="a1" />
+                        <input type="text" class="form-control" name="a1"
+                        value={this.state.a1} onChange={this.changeA1Handler} />
                     </div>
                 </div>
                 <div class="form-group row">
