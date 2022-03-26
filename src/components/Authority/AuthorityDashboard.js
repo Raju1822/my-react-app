@@ -15,7 +15,7 @@ class AuthorityDashboard extends Component {
       id: "",
       reason: "",
       status: "1",
-      stat: "0",
+      stat: "2",
       // firstName:"",
       // lastName:"",
       // emailId:"",
@@ -25,9 +25,13 @@ class AuthorityDashboard extends Component {
     this.Reject = this.Reject.bind(this);
   }
 
-  FunctionPreview() {
-    window.location.href = "/preview";
+
+
+  PreviewReport(id) {
+    this.props.history.push(`/preview/${id}`);
   }
+
+
 
   // For rejectioon of appraisal
 
@@ -251,7 +255,7 @@ class AuthorityDashboard extends Component {
 
                     <td>
                       <button
-                        onClick={this.FunctionPreview}
+                        onClick={() => this.PreviewReport(employee.id)}
                         className="btn btn-info"
                       >
                         Preview{" "}
@@ -405,30 +409,31 @@ class AuthorityDashboard extends Component {
                               <td> {employee.b1}</td>
 
                               <td>
-                                <button
-                                  onClick={this.FunctionPreview}
-                                  className="btn btn-info"
-                                >
-                                  Preview{" "}
-                                </button>{" "}
-                              </td>
-                              <td>
-                                <button
-                                  style={{ marginLeft: "10px" }}
-                                  className="btn btn-success"
-                                >
-                                  Accept{" "}
-                                </button>
-                              </td>
-                              <td>
-                                <button
-                                  style={{ marginLeft: "10px" }}
-                                  className="btn btn-danger"
-                                  data-toggle="modal"
-                                  data-target="#myModal"
-                                >
-                                  Reject{" "}
-                                </button>
+                              <button
+                        onClick={() => this.PreviewReport(employee.id)}
+                        className="btn btn-info"
+                      >
+                        Preview{" "}
+                      </button>{" "}
+                    </td>
+                    <td>
+                      <button
+                        style={{ marginLeft: "10px" }}
+                        className="btn btn-success"
+                        onClick={() => this.Accept(employee.id)}
+                      >
+                        Accept{" "}
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        style={{ marginLeft: "10px" }}
+                        className="btn btn-danger"
+                        data-toggle="modal"
+                        data-target="#myModal"
+                      >
+                        Reject{" "}
+                      </button>
                               </td>
                             </tr>
                           ))}

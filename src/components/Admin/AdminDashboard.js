@@ -5,12 +5,14 @@ import Admin from "../img/admin.png";
 
 import AdminHeader from "./AdminHeader";
 import EmployeeService from "../../services/EmployeeService";
+import AppraisalService from "../../services/AppraisalService";
 class AdminDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       admin: [],
       staff: [],
+      TotalSalary:0,
     };
   }
   addEmployee() {
@@ -36,15 +38,23 @@ viewEmployee(employeeId){
       this.setState({ admin: res.data });
     });
     EmployeeService.getEmployees().then((res) => {
-      this.setState({ staff: res.data });
+      const persons = res.data;
+      const longeur = res.data.length;
+      this.setState({ staff: res.data ,persons, longeur});
     });
 
-    EmployeeService.getEmployees().then(res => {
-        const persons = res.data;
-        const longeur = res.data.length;
-        this.setState({ persons, longeur });
+    AppraisalService.getAllAppraisal().then(res => {
+      const TotalAppraisal = res.data.length;
+        this.setState({ TotalAppraisal });
       })
   }
+
+//   Total(){
+
+//       this.state.staff.map((employee) => (
+//       this.state.TotalSalary +=  employee.salary
+//     ));
+// }
 
   render() {
     return (
@@ -125,7 +135,7 @@ viewEmployee(employeeId){
                       <p className="card-text">
                         <i className="fa fa-users fa-3x"></i>
                       </p>
-                       <p> { this.state.longeur}</p>
+                       <p> 0{ this.state.longeur}</p>
                     </div>
                     <div className="bg-warning text-white">
                       <p>Total Employess</p>
@@ -138,7 +148,7 @@ viewEmployee(employeeId){
                       <p className="card-text">
                         <i className="fa fa-file fa-3x"></i>
                       </p>
-                      <p>2600</p>
+                      <p>0{ this.state.TotalAppraisal}</p>
                     </div>
                     <div className="bg-success text-white">
                       <p>Total Report</p>
@@ -151,7 +161,9 @@ viewEmployee(employeeId){
                       <p className="card-text">
                         <i className="fa fa-money fa-3x"></i>
                       </p>
-                      <p>1450000</p>
+                      <p>0
+                        {/* {this.Total()}{this.state.TotalSalary} */}
+                      </p>
                     </div>
                     <div className="bg-primary text-white">
                       <p>Total Salary</p>

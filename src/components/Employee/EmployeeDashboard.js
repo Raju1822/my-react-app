@@ -29,6 +29,19 @@ class EmployeeDashboard extends Component {
     window.location.href = "/employee-login";
   }
 
+  getMesaage(){
+    if(this.state.employees.status === 0)
+      return <p>Your have not created any appraisal report yet..!</p>
+    if(this.state.employees.status === 1)
+     return <p>Your appraisal report has been accepted..!</p>
+    if(this.state.employees.status === 2)
+     return <p>Your Appraisal report have been rejected.<br />Reason:<br /> {this.state.employees.reason} </p>
+    else
+    return <p>No new message here.</p>
+
+
+  }
+
   render() {
     return (
       <div>
@@ -279,8 +292,12 @@ class EmployeeDashboard extends Component {
                     role="tabpanel"
                     aria-labelledby="v-pills-settings-tab"
                   >
-                    <h4 class="font-italic mb-4">Messages</h4>
-                    <p class="font-italic text-muted mb-2">Hi</p>
+                    <h4 class=" mb-4">Messages</h4>
+                    <p class="text-muted mb-2">
+                      {
+                        this.getMesaage()
+                      }
+                    </p>
                   </div>
                 </div>
               </div>

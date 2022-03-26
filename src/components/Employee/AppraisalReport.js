@@ -844,9 +844,9 @@ class AppraisalReport extends Component {
                     <p className="overflow-auto">
                       <table className="table table-bordered">
                         <tr>
-                          <td className="col"></td>
-                          <td className="col">Reporting Authority</td>
-                          <td className="col">
+                          <td ></td>
+                          <td >Reporting Authority</td>
+                          <td >
                             Reviewing Authority(Refer Para 2 of part-5)
                           </td>
                         </tr>
@@ -995,9 +995,9 @@ class AppraisalReport extends Component {
                       <p className="overflow-auto">
                         <table className="table table-bordered">
                           <tr>
-                            <td className="col"></td>
-                            <td className="col">Reporting Authority</td>
-                            <td className="col">
+                            <td ></td>
+                            <td >Reporting Authority</td>
+                            <td >
                               Reviewing Authority(Refer Para 2 of part-5)
                             </td>
                           </tr>
@@ -1266,9 +1266,9 @@ class AppraisalReport extends Component {
                       <p className="overflow-auto">
                         <table className="table table-bordered">
                           <tr>
-                            <td className="col"></td>
-                            <td className="col">Reporting Authority</td>
-                            <td className="col">
+                            <td ></td>
+                            <td >Reporting Authority</td>
+                            <td >
                               Reviewing Authority(Refer Para 2 of part-5)
                             </td>
                           </tr>
@@ -1668,7 +1668,7 @@ class AppraisalReport extends Component {
                     <label className="col-sm-3 col-form-label">Date: </label>
                     <div className="col-sm-4">
                       <input
-                        type="text"
+                        type="date"
                         className="form-control"
                         name="e12"
                         value={this.state.e12}

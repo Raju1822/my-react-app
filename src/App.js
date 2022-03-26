@@ -39,7 +39,7 @@ function App() {
                           <Route path = "/appraisal-report" exact component = {AppraisalReport}></Route>
 
                           <Route path = "/auth-home" exact component = {AuthorityDashboard}></Route>
-                          <Route path = "/preview" exact component = {PreviewReport}></Route>
+                          <Route path = "/preview/:id" exact component = {PreviewReport}></Route>
 
 
                           <Route path = "/listemployee" exact component = {ListEmployeeComponent}></Route>
