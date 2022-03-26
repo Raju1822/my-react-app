@@ -6,10 +6,17 @@ const APPRAISAL_API_BASE_URL = "http://localhost:8080/api/appraisal";
 
 class AppraisalService{
 
-    getAppraisalById(AppraisalId){
-        return axios.get(APPRAISAL_API_BASE_URL + '/' + AppraisalId);
+    getAllAppraisal(){
+        return axios.get(APPRAISAL_API_BASE_URL);
     }
 
+    createAppraisal(appraisal){
+        return axios.post(APPRAISAL_API_BASE_URL, appraisal);
+    }
+
+    getAppraisalById(appraisalId){
+        return axios.get(APPRAISAL_API_BASE_URL + '/' + appraisalId);
+    }
 
 }
 

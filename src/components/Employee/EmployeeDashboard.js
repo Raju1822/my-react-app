@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import EmployeeService from "../../services/EmployeeService";
+import AppraisalService from "../../services/AppraisalService";
 import profile from "../img/avatar.png";
 import EmployeeHeader from "./EmployeeHeader";
-
 
 class EmployeeDashboard extends Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class EmployeeDashboard extends Component {
 
     this.state = {
       employees: [],
+      appraisal: [],
     };
   }
 
@@ -18,18 +19,20 @@ class EmployeeDashboard extends Component {
     EmployeeService.getEmployeeById(employeeId).then((res) => {
       this.setState({ employees: res.data });
     });
+    AppraisalService.getAppraisalById(employeeId).then((res) => {
+      this.setState({ appraisal: res.data });
+    });
   }
 
-  logout (){
+  logout() {
     alert("You want to logout ?");
-    window.location.href ='/employee-login';
+    window.location.href = "/employee-login";
   }
 
   render() {
     return (
       <div>
-
-<EmployeeHeader/>
+        <EmployeeHeader />
 
         {/* profile picture  */}
 
@@ -38,11 +41,11 @@ class EmployeeDashboard extends Component {
             <h1 className="jumbotron-heading ">
               <img src={profile} alt="profile-pic" width="15%" />
             </h1>
-            <p className="lead "> <b>Employee:  </b>
-
-            {this.state.employees.firstName }  {this.state.employees.lastName }
-
-              </p>
+            <p className="lead ">
+              {" "}
+              <b>Employee: </b>
+              {this.state.employees.firstName} {this.state.employees.lastName}
+            </p>
             <p>
               <button type="button" className="btn btn-primary m-2">
                 Profile
@@ -52,7 +55,6 @@ class EmployeeDashboard extends Component {
                 className="btn btn-secondary m-2"
                 data-toggle="modal"
                 data-target="#myModal"
-
                 onClick={this.logout}
               >
                 Logout
@@ -142,15 +144,28 @@ class EmployeeDashboard extends Component {
                     role="tabpanel"
                     aria-labelledby="v-pills-home-tab"
                   >
-                    <h4 class=" mb-4"> <b>Welcome :  </b>{this.state.employees.firstName }  {this.state.employees.lastName }</h4>
+                    <h4 class=" mb-4">
+                      {" "}
+                      <b>Welcome : </b>
+                      {this.state.employees.firstName}{" "}
+                      {this.state.employees.lastName}
+                    </h4>
                     <p class="text-muted m-5 ">
-
-                        <p><b> Employee Id:    </b>  {this.state.employees.id } </p>
-                        <p><b> First Name:    </b>  {this.state.employees.firstName } </p>
-                        <p><b> Last Name:    </b>  {this.state.employees.lastName } </p>
-                        <p><b> Email Id:    </b>  {this.state.employees.emailId } </p>
-                        <p><b> Salary:    </b>  {this.state.employees.salary } </p>
-
+                      <p>
+                        <b> Employee Id: </b> {this.state.employees.id}{" "}
+                      </p>
+                      <p>
+                        <b> First Name: </b> {this.state.employees.firstName}{" "}
+                      </p>
+                      <p>
+                        <b> Last Name: </b> {this.state.employees.lastName}{" "}
+                      </p>
+                      <p>
+                        <b> Email Id: </b> {this.state.employees.emailId}{" "}
+                      </p>
+                      <p>
+                        <b> Salary: </b> {this.state.employees.salary}{" "}
+                      </p>
                     </p>
                   </div>
 
@@ -175,14 +190,16 @@ class EmployeeDashboard extends Component {
                         <thead>
                           <tr>
                             <th> Employee Id</th>
-                            <th> Employee First Name</th>
+                            <th> Employee Name</th>
+                            <th> Officer Name</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>id</td>
-                            <td> Name here</td>
+                            <td>{this.state.appraisal.id}</td>
+                            <td>{this.state.appraisal.a1}</td>
+                            <td>{this.state.appraisal.b1}</td>
                             <td>
                               <button
                                 style={{ marginLeft: "10px" }}

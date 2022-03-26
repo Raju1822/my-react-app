@@ -1,20 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import "../../css/Header.css";
 
 class AuthHeader extends Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = {
+    this.state = {};
+  }
 
-        }
-    }
-
-    render() {
-        return (
-            <div className="header">
-                <header>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+  render() {
+    return (
+      <div className="header">
+        <header>
+          <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
             <a className="navbar-brand" href="/">
               {/* <img src={NIT_Raipur} alt="page-icon"></img> */}
               NIT Raipur
@@ -37,18 +35,16 @@ class AuthHeader extends Component {
                   <a className="nav-link" href="##">
                     {" "}
                     <i class="fa fa-home mr-2"></i>
-                     Authority <span className="sr-only">(current)</span>
+                    Authority <span className="sr-only">(current)</span>
                   </a>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="##">
                     <i className="fa fa-users mr-2" />
                     Something
                   </a>
                 </li>
-
-
 
                 <li className="nav-item dropdown">
                   <a
@@ -56,7 +52,6 @@ class AuthHeader extends Component {
                     href="/"
                     id="navbarDropdownMenuLink"
                     data-toggle="dropdown"
-
                     aria-expanded="false"
                   >
                     <i class="fa fa-user mr-2"></i>
@@ -66,7 +61,6 @@ class AuthHeader extends Component {
                     className="dropdown-menu p-2 my-2"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-
                     <a className="dropdown-item" href="/">
                       Something
                     </a>
@@ -96,10 +90,10 @@ class AuthHeader extends Component {
               </ul>
             </div>
           </nav>
-                </header>
-            </div>
-        )
-    }
+        </header>
+      </div>
+    );
+  }
 }
 
-export default AuthHeader
+export default AuthHeader;

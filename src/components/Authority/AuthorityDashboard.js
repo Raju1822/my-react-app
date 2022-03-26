@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import AppraisalService from "../../services/AppraisalService";
 import AuthService from "../../services/AuthService";
+import EmployeeService from "../../services/EmployeeService";
 import profile from "../img/avatar.png";
 import AuthHeader from "./AuthHeader";
 
@@ -9,20 +11,65 @@ class AuthorityDashboard extends Component {
 
     this.state = {
       auth: [],
+      appraisal: [],
+      id: "",
+      reason: "",
+      status: "1",
+      stat: "0",
+      // firstName:"",
+      // lastName:"",
+      // emailId:"",
     };
+    this.changeIdHandler = this.changeIdHandler.bind(this);
+    this.changeReasonHandler = this.changeReasonHandler.bind(this);
+    this.Reject = this.Reject.bind(this);
   }
 
   FunctionPreview() {
     window.location.href = "/preview";
   }
+
+  // For rejectioon of appraisal
+
   Reject() {
-    alert("Form is rejected");
+    let emp = {
+      reason: this.state.reason,
+      status: this.state.stat,
+    };
+    console.log("emp => " + JSON.stringify(emp));
+    EmployeeService.updateEmployeeReason(emp, this.state.id);
+    window.location.href = "/auth-home";
+    alert("Appraisal form is rejected of employee Id: " + this.state.id);
+  }
+  changeIdHandler = (event) => {
+    this.setState({ id: event.target.value });
+  };
+  changeReasonHandler = (event) => {
+    this.setState({ reason: event.target.value });
+  };
+
+  // Form is accepted
+
+  Accept(AppraisalId) {
+    let emp = {
+      reason: this.state.reason,
+      status: this.state.status,
+    };
+    console.log("emp => " + JSON.stringify(emp));
+    EmployeeService.updateEmployeeStatus(emp, AppraisalId);
+    alert("Appraisal of Employee of id " + AppraisalId + " is Accepted");
+    window.location.reload();
   }
 
   componentDidMount() {
     const authId = 1;
     AuthService.getAuthById(authId).then((res) => {
       this.setState({ auth: res.data });
+    });
+    AppraisalService.getAllAppraisal().then((res) => {
+      const persons = res.data;
+      const longeur = res.data.length;
+      this.setState({ appraisal: res.data, persons, longeur });
     });
   }
 
@@ -74,7 +121,7 @@ class AuthorityDashboard extends Component {
                     <h4>Appraisal Report</h4>
                   </div>
                   <div class="text-info text-center mt-2">
-                    <h1>000</h1>
+                    <h1>0{this.state.longeur}</h1>
                   </div>
                 </div>
               </div>
@@ -100,7 +147,7 @@ class AuthorityDashboard extends Component {
                     <h4>Information</h4>
                   </div>
                   <div class="text-danger text-center mt-2">
-                    <h1>346</h1>
+                    <h1>000</h1>
                   </div>
                 </div>
               </div>
@@ -113,7 +160,7 @@ class AuthorityDashboard extends Component {
                     <h4>Approved</h4>
                   </div>
                   <div class="text-warning text-center mt-2">
-                    <h1>346</h1>
+                    <h1>000</h1>
                   </div>
                 </div>
               </div>
@@ -121,103 +168,116 @@ class AuthorityDashboard extends Component {
           </div>
         </section>
 
+        {/* Modal for reject */}
 
-{/* Modal for reject */}
+        <div className="container">
+          <div className="modal" id="myModal">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-body">
+                  <h1 className="text-center">
+                    <img src={profile} alt="profile-pic" width="10%" />
+                  </h1>
+                  <h4 className="modal-title text-center">Authority</h4>
+                </div>
+                <div className="modal-header">
+                  <h5 className="text-muted">
+                    Do you want to Reject Appraisal Report ?
+                  </h5>
+                </div>
 
-<div className="container">
-            <div className="modal" id="myModal">
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-body">
-                    <h1 className="text-center">
-                      <img src={profile} alt="profile-pic" width="10%" />
-                    </h1>
-                    <h4 className="modal-title text-center">Authority</h4>
-                  </div>
-                  <div className="modal-header">
-                    <h5 className="text-muted">Do you want to Reject Appraisal Report ?</h5>
-                  </div>
-
-
-                  <div className="container p-5">
-
+                <div className="container p-5">
                   <form>
-                    <div className="form-group"> Employee Id: <input type="text" name="id" /></div>
+                    <div className="form-group">
+                      {" "}
+                      Employee Id:{" "}
+                      <input
+                        type="text"
+                        name="id"
+                        value={this.state.id}
+                        onChange={this.changeIdHandler}
+                      />
+                    </div>
 
                     <div className="form-group">Note to Reject: </div>
-                    <textarea rows="5" cols="45" name="reason"placeholder="Write a note here..."></textarea>
-                    <button  className="btn btn-success">Submit </button>
+                    <textarea
+                      rows="5"
+                      cols="45"
+                      name="reason"
+                      placeholder="Write a note here..."
+                      value={this.state.reason}
+                      onChange={this.changeReasonHandler}
+                    ></textarea>
+                    <button className="btn btn-success" onClick={this.Reject}>
+                      Submit{" "}
+                    </button>
                     <a
-                      href="#"
+                      href="##"
                       className="btn btn-warning m-2 "
                       data-dismiss="modal"
                     >
                       Cancel
                     </a>
-                    </form>
-
-
-
-                  </div>
-
+                  </form>
                 </div>
               </div>
             </div>
-  </div>
+          </div>
+        </div>
 
-{/* Appraisal report list */}
+        {/* Appraisal report list */}
         <div className="container pb-5">
           <h2 className="text-center"> List of Appraisal Reports</h2>
 
           <br></br>
-          <div className=" overflow-auto row">
+          <div className=" overflow-auto row text-center">
             <table className="table table-striped table-bordered">
               <thead>
                 <tr>
+                  <th> Employee Id</th>
                   <th> Employee Name</th>
-                  <th> Officer 1</th>
-                  <th> Officer 2</th>
+                  <th> Officer Name</th>
                   <th> Preview</th>
                   <th>Approve</th>
                   <th>Reject</th>
                 </tr>
               </thead>
               <tbody>
-                {
-                  <tr>
-                    <td> {this.state.auth.firstName} </td>
-                    <td> {this.state.auth.firstName}</td>
-                    <td> {this.state.auth.firstName}</td>
+                {this.state.appraisal.map((employee) => (
+                  <tr key={employee.id}>
+                    <td> {employee.id} </td>
+                    <td> {employee.a1} </td>
+                    <td> {employee.b1}</td>
+
                     <td>
                       <button
-                        style={{ marginLeft: "10px" }}
-                        className="btn btn-warning"
                         onClick={this.FunctionPreview}
+                        className="btn btn-info"
                       >
-                        Preview
-                      </button>
+                        Preview{" "}
+                      </button>{" "}
                     </td>
                     <td>
                       <button
                         style={{ marginLeft: "10px" }}
                         className="btn btn-success"
+                        onClick={() => this.Accept(employee.id)}
                       >
-                        Accept
+                        Accept{" "}
                       </button>
                     </td>
                     <td>
                       <button
                         style={{ marginLeft: "10px" }}
                         className="btn btn-danger"
-                        // onClick={this.Reject}
                         data-toggle="modal"
                         data-target="#myModal"
                       >
-                        Reject
+                        Reject{" "}
                       </button>
                     </td>
                   </tr>
-                }
+                ))}
               </tbody>
             </table>
           </div>
@@ -326,53 +386,52 @@ class AuthorityDashboard extends Component {
                   >
                     <h4 class=" mb-4">Appraisal Forms</h4>
                     <p class="overflow-auto text-muted mb-2">
-                      <table className="table table-bordered text-center">
+                      <table className="table table-bordered">
                         <thead>
                           <tr>
-                            <th> Employee id</th>
-                            <th> Officer 1</th>
-                            <th> Officer 2</th>
-                            <th>Preview Report</th>
-                            <th>Approve </th>
-                            <th>Reject </th>
+                            <th> Employee Id</th>
+                            <th> Employee Name</th>
+                            <th> Officer Name</th>
+                            <th> Preview</th>
+                            <th>Approve</th>
+                            <th>Reject</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>id</td>
-                            <td> Name_first</td>
-                            <td>Name_Second</td>
-                            <td>
-                              <button
-                                style={{ marginLeft: "10px" }}
-                                className="btn btn-warning"
-                                onClick={this.FunctionPreview}
-                              >
-                                {" "}
-                                Preview
-                              </button>
-                            </td>
-                            <td>
-                              <button
-                                style={{ marginLeft: "10px" }}
-                                className="btn btn-success"
-                              >
-                                {" "}
-                                Accept
-                              </button>
-                            </td>
-                            <td>
-                              {" "}
-                              <button
-                                style={{ marginLeft: "10px" }}
-                                className="btn btn-danger"
-                                onClick={this.Reject}
-                              >
-                                {" "}
-                                Reject
-                              </button>
-                            </td>
-                          </tr>
+                          {this.state.appraisal.map((employee) => (
+                            <tr key={employee.id}>
+                              <td> {employee.id} </td>
+                              <td> {employee.a1} </td>
+                              <td> {employee.b1}</td>
+
+                              <td>
+                                <button
+                                  onClick={this.FunctionPreview}
+                                  className="btn btn-info"
+                                >
+                                  Preview{" "}
+                                </button>{" "}
+                              </td>
+                              <td>
+                                <button
+                                  style={{ marginLeft: "10px" }}
+                                  className="btn btn-success"
+                                >
+                                  Accept{" "}
+                                </button>
+                              </td>
+                              <td>
+                                <button
+                                  style={{ marginLeft: "10px" }}
+                                  className="btn btn-danger"
+                                  data-toggle="modal"
+                                  data-target="#myModal"
+                                >
+                                  Reject{" "}
+                                </button>
+                              </td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </p>
