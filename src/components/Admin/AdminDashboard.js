@@ -17,7 +17,7 @@ class AdminDashboard extends Component {
   }
   addEmployee() {
     // alert("Employee add feature comming soon........!");
-    this.props.history.push( "/addemployee");
+    window.location.href = "/addemployee";
   }
   deleteEmployee(employeeId){
     // alert("Hell" + employeeId);
