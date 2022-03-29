@@ -31,7 +31,7 @@ class AuthorityLogin extends Component {
       password: this.state.password,
     };
 
-    if(auth.emailId ==="auth@gmail.com" && auth.password ==="1234")
+    if(auth.emailId ==="auth1@gmail.com" && auth.password ==="1234")
     {
       this.props.history.push('/auth-home');
     }

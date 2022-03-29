@@ -31,7 +31,7 @@ class Home extends Component {
       password: this.state.password,
     };
 
-    if(admin.emailId ==="a@gmail.com" && admin.password ==="1234")
+    if(admin.emailId ==="admin@gmail.com" && admin.password ==="1234")
     {
       this.props.history.push('/admin');
     }
