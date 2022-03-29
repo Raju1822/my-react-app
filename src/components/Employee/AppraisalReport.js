@@ -507,7 +507,7 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="a1"
-                      value={this.state.a1}
+                      required value={this.state.a1}
                       onChange={this.changeA1Handler}
                     />
                   </div>
@@ -521,7 +521,7 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="a2"
-                      value={this.state.a2}
+                      required value={this.state.a2}
                       onChange={this.changeA2Handler}
                     />
                   </div>
@@ -552,7 +552,7 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="b1"
-                      value={this.state.b1}
+                      required value={this.state.b1}
                       onChange={this.changeB1Handler}
                     />
                   </div>
@@ -566,7 +566,7 @@ class AppraisalReport extends Component {
                       type="date"
                       className="form-control"
                       name="b2"
-                      value={this.state.b2}
+                      required value={this.state.b2}
                       onChange={this.changeB2Handler}
                     />
                   </div>
@@ -582,7 +582,7 @@ class AppraisalReport extends Component {
                       type="date"
                       className="form-control"
                       name="b3"
-                      value={this.state.b3}
+                      required value={this.state.b3}
                       onChange={this.changeB3Handler}
                     />
                   </div>
@@ -592,7 +592,7 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="b4"
-                      value={this.state.b4}
+                      required value={this.state.b4}
                       onChange={this.changeB4Handler}
                     />
                   </div>
@@ -605,7 +605,7 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="b5"
-                      value={this.state.b5}
+                      required value={this.state.b5}
                       onChange={this.changeB5Handler}
                     />
                   </div>
@@ -615,7 +615,7 @@ class AppraisalReport extends Component {
                       type="date"
                       className="form-control"
                       name="b6"
-                      value={this.state.b6}
+                      required value={this.state.b6}
                       onChange={this.changeB6Handler}
                     />
                   </div>
@@ -630,7 +630,7 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="b7"
-                      value={this.state.b7}
+                      required value={this.state.b7}
                       onChange={this.changeB7Handler}
                     />
                   </div>
@@ -660,7 +660,7 @@ class AppraisalReport extends Component {
                     className="form-control"
                     name="c1"
                     rows="3"
-                    value={this.state.c1}
+                    required value={this.state.c1}
                     onChange={this.changeC1Handler}
                   ></textarea>
                 </div>
@@ -687,7 +687,7 @@ class AppraisalReport extends Component {
                               className="form-control"
                               name="c2"
                               rows="3"
-                              value={this.state.c2}
+                              required value={this.state.c2}
                               onChange={this.changeC2Handler}
                             ></textarea>
                           </div>
@@ -698,7 +698,7 @@ class AppraisalReport extends Component {
                               className="form-control"
                               name="c3"
                               rows="3"
-                              value={this.state.c3}
+                              required value={this.state.c3}
                               onChange={this.changeC3Handler}
                             ></textarea>
                           </div>
@@ -723,7 +723,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="c4"
                       rows="3"
-                      value={this.state.c4}
+                      required value={this.state.c4}
                       onChange={this.changeC4Handler}
                     ></textarea>
                   </div>
@@ -737,7 +737,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="c5"
                       rows="3"
-                      value={this.state.c5}
+                      required value={this.state.c5}
                       onChange={this.changeC5Handler}
                     ></textarea>
                   </div>
@@ -757,7 +757,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="c6"
                       rows="3"
-                      value={this.state.c6}
+                      required value={this.state.c6}
                       onChange={this.changeC6Handler}
                     ></textarea>
                   </div>
@@ -771,7 +771,7 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="c7"
-                      value={this.state.c7}
+                      required value={this.state.c7}
                       onChange={this.changeC7Handler}
                     />
                   </div>
@@ -861,7 +861,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d1"
                                 rows="1"
-                                value={this.state.d1}
+                                required value={this.state.d1}
                                 onChange={this.changeD1Handler}
                               ></textarea>
                             </div>
@@ -872,7 +872,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d2"
                                 rows="1"
-                                value={this.state.d2}
+                                required value={this.state.d2}
                                 onChange={this.changeD2Handler}
                               ></textarea>
                             </div>
@@ -886,7 +886,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d3"
                                 rows="1"
-                                value={this.state.d3}
+                                required value={this.state.d3}
                                 onChange={this.changeD3Handler}
                               ></textarea>
                             </div>
@@ -897,7 +897,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d4"
                                 rows="1"
-                                value={this.state.d4}
+                                required value={this.state.d4}
                                 onChange={this.changeD4Handler}
                               ></textarea>
                             </div>
@@ -911,7 +911,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d5"
                                 rows="1"
-                                value={this.state.d5}
+                                required value={this.state.d5}
                                 onChange={this.changeD5Handler}
                               ></textarea>
                             </div>
@@ -922,7 +922,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d6"
                                 rows="1"
-                                value={this.state.d6}
+                                required value={this.state.d6}
                                 onChange={this.changeD6Handler}
                               ></textarea>
                             </div>
@@ -939,7 +939,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d7"
                                 rows="1"
-                                value={this.state.d7}
+                                required value={this.state.d7}
                                 onChange={this.changeD7Handler}
                               ></textarea>
                             </div>
@@ -950,7 +950,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d8"
                                 rows="1"
-                                value={this.state.d8}
+                                required value={this.state.d8}
                                 onChange={this.changeD8Handler}
                               ></textarea>
                             </div>
@@ -964,7 +964,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d9"
                                 rows="1"
-                                value={this.state.d9}
+                                required value={this.state.d9}
                                 onChange={this.changeD9Handler}
                               ></textarea>
                             </div>
@@ -975,7 +975,7 @@ class AppraisalReport extends Component {
                                 className="form-control"
                                 name="d10"
                                 rows="1"
-                                value={this.state.d10}
+                                required value={this.state.d10}
                                 onChange={this.changeD10Handler}
                               ></textarea>
                             </div>
@@ -1009,7 +1009,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d11"
                                   rows="1"
-                                  value={this.state.d11}
+                                  required value={this.state.d11}
                                   onChange={this.changeD11Handler}
                                 ></textarea>
                               </div>
@@ -1020,7 +1020,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d12"
                                   rows="1"
-                                  value={this.state.d12}
+                                  required value={this.state.d12}
                                   onChange={this.changeD12Handler}
                                 ></textarea>
                               </div>
@@ -1034,7 +1034,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d13"
                                   rows="1"
-                                  value={this.state.d13}
+                                  required value={this.state.d13}
                                   onChange={this.changeD13Handler}
                                 ></textarea>
                               </div>
@@ -1045,7 +1045,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d14"
                                   rows="1"
-                                  value={this.state.d14}
+                                  required value={this.state.d14}
                                   onChange={this.changeD14Handler}
                                 ></textarea>
                               </div>
@@ -1059,7 +1059,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d15"
                                   rows="1"
-                                  value={this.state.d15}
+                                  required value={this.state.d15}
                                   onChange={this.changeD15Handler}
                                 ></textarea>
                               </div>
@@ -1070,7 +1070,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d16"
                                   rows="1"
-                                  value={this.state.d16}
+                                  required value={this.state.d16}
                                   onChange={this.changeD16Handler}
                                 ></textarea>
                               </div>
@@ -1084,7 +1084,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d17"
                                   rows="1"
-                                  value={this.state.d17}
+                                  required value={this.state.d17}
                                   onChange={this.changeD17Handler}
                                 ></textarea>
                               </div>
@@ -1095,7 +1095,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d18"
                                   rows="1"
-                                  value={this.state.d18}
+                                  required value={this.state.d18}
                                   onChange={this.changeD18Handler}
                                 ></textarea>
                               </div>
@@ -1109,7 +1109,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d19"
                                   rows="1"
-                                  value={this.state.d19}
+                                  required value={this.state.d19}
                                   onChange={this.changeD19Handler}
                                 ></textarea>
                               </div>
@@ -1120,7 +1120,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d20"
                                   rows="1"
-                                  value={this.state.d20}
+                                  required value={this.state.d20}
                                   onChange={this.changeD20Handler}
                                 ></textarea>
                               </div>
@@ -1134,7 +1134,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d21"
                                   rows="1"
-                                  value={this.state.d21}
+                                  required value={this.state.d21}
                                   onChange={this.changeD21Handler}
                                 ></textarea>
                               </div>
@@ -1145,7 +1145,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d22"
                                   rows="1"
-                                  value={this.state.d22}
+                                  required value={this.state.d22}
                                   onChange={this.changeD22Handler}
                                 ></textarea>
                               </div>
@@ -1159,7 +1159,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d23"
                                   rows="1"
-                                  value={this.state.d23}
+                                  required value={this.state.d23}
                                   onChange={this.changeD23Handler}
                                 ></textarea>
                               </div>
@@ -1170,7 +1170,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d24"
                                   rows="1"
-                                  value={this.state.d24}
+                                  required value={this.state.d24}
                                   onChange={this.changeD24Handler}
                                 ></textarea>
                               </div>
@@ -1184,7 +1184,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d25"
                                   rows="1"
-                                  value={this.state.d25}
+                                  required value={this.state.d25}
                                   onChange={this.changeD25Handler}
                                 ></textarea>
                               </div>
@@ -1195,7 +1195,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d26"
                                   rows="1"
-                                  value={this.state.d26}
+                                  required value={this.state.d26}
                                   onChange={this.changeD26Handler}
                                 ></textarea>
                               </div>
@@ -1209,7 +1209,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d27"
                                   rows="1"
-                                  value={this.state.d27}
+                                  required value={this.state.d27}
                                   onChange={this.changeD27Handler}
                                 ></textarea>
                               </div>
@@ -1220,7 +1220,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d28"
                                   rows="1"
-                                  value={this.state.d28}
+                                  required value={this.state.d28}
                                   onChange={this.changeD28Handler}
                                 ></textarea>
                               </div>
@@ -1234,7 +1234,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d29"
                                   rows="1"
-                                  value={this.state.d29}
+                                  required value={this.state.d29}
                                   onChange={this.changeD29Handler}
                                 ></textarea>
                               </div>
@@ -1245,7 +1245,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d30"
                                   rows="1"
-                                  value={this.state.d30}
+                                  required value={this.state.d30}
                                   onChange={this.changeD30Handler}
                                 ></textarea>
                               </div>
@@ -1284,7 +1284,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d31"
                                   rows="1"
-                                  value={this.state.d31}
+                                  required value={this.state.d31}
                                   onChange={this.changeD31Handler}
                                 ></textarea>
                               </div>
@@ -1295,7 +1295,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d32"
                                   rows="1"
-                                  value={this.state.d32}
+                                  required value={this.state.d32}
                                   onChange={this.changeD32Handler}
                                 ></textarea>
                               </div>
@@ -1312,7 +1312,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d33"
                                   rows="1"
-                                  value={this.state.d33}
+                                  required value={this.state.d33}
                                   onChange={this.changeD33Handler}
                                 ></textarea>
                               </div>
@@ -1323,7 +1323,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d34"
                                   rows="1"
-                                  value={this.state.d34}
+                                  required value={this.state.d34}
                                   onChange={this.changeD34Handler}
                                 ></textarea>
                               </div>
@@ -1337,7 +1337,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d35"
                                   rows="1"
-                                  value={this.state.d35}
+                                  required value={this.state.d35}
                                   onChange={this.changeD35Handler}
                                 ></textarea>
                               </div>
@@ -1348,7 +1348,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d36"
                                   rows="1"
-                                  value={this.state.d36}
+                                  required value={this.state.d36}
                                   onChange={this.changeD36Handler}
                                 ></textarea>
                               </div>
@@ -1362,7 +1362,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d37"
                                   rows="1"
-                                  value={this.state.d37}
+                                  required value={this.state.d37}
                                   onChange={this.changeD37Handler}
                                 ></textarea>
                               </div>
@@ -1373,7 +1373,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d38"
                                   rows="1"
-                                  value={this.state.d38}
+                                  required value={this.state.d38}
                                   onChange={this.changeD38Handler}
                                 ></textarea>
                               </div>
@@ -1389,7 +1389,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d39"
                                   rows="1"
-                                  value={this.state.d39}
+                                  required value={this.state.d39}
                                   onChange={this.changeD39Handler}
                                 ></textarea>
                               </div>
@@ -1400,7 +1400,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d40"
                                   rows="1"
-                                  value={this.state.d40}
+                                  required value={this.state.d40}
                                   onChange={this.changeD40Handler}
                                 ></textarea>
                               </div>
@@ -1414,7 +1414,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d41"
                                   rows="1"
-                                  value={this.state.d41}
+                                  required value={this.state.d41}
                                   onChange={this.changeD41Handler}
                                 ></textarea>
                               </div>
@@ -1425,7 +1425,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d42"
                                   rows="1"
-                                  value={this.state.d42}
+                                  required value={this.state.d42}
                                   onChange={this.changeD42Handler}
                                 ></textarea>
                               </div>
@@ -1440,7 +1440,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d43"
                                   rows="1"
-                                  value={this.state.d43}
+                                  required value={this.state.d43}
                                   onChange={this.changeD43Handler}
                                 ></textarea>
                               </div>
@@ -1451,7 +1451,7 @@ class AppraisalReport extends Component {
                                   className="form-control"
                                   name="d44"
                                   rows="1"
-                                  value={this.state.d44}
+                                  required value={this.state.d44}
                                   onChange={this.changeD44Handler}
                                 ></textarea>
                               </div>
@@ -1469,7 +1469,7 @@ class AppraisalReport extends Component {
                           type="text"
                           className="form-control"
                           name="d45"
-                          value={this.state.d45}
+                          required value={this.state.d45}
                           onChange={this.changeD45Handler}
                         />
                       </div>
@@ -1483,7 +1483,7 @@ class AppraisalReport extends Component {
                           type="text"
                           className="form-control"
                           name="d46"
-                          value={this.state.d46}
+                          required value={this.state.d46}
                           onChange={this.changeD46Handler}
                         />
                       </div>
@@ -1516,7 +1516,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="e1"
                       rows="3"
-                      value={this.state.e1}
+                      required value={this.state.e1}
                       onChange={this.changeE1Handler}
                     ></textarea>
                   </div>
@@ -1533,7 +1533,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="e2"
                       rows="1"
-                      value={this.state.e2}
+                      required value={this.state.e2}
                       onChange={this.changeE2Handler}
                     ></textarea>
                   </div>
@@ -1545,7 +1545,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="e3"
                       rows="2"
-                      value={this.state.e3}
+                      required value={this.state.e3}
                       onChange={this.changeE3Handler}
                     ></textarea>
                   </div>
@@ -1558,7 +1558,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="e4"
                       rows="2"
-                      value={this.state.e4}
+                      required value={this.state.e4}
                       onChange={this.changeE4Handler}
                     ></textarea>
                   </div>
@@ -1576,7 +1576,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="e5"
                       rows="4"
-                      value={this.state.e5}
+                      required value={this.state.e5}
                       onChange={this.changeE5Handler}
                     ></textarea>
                   </div>
@@ -1591,7 +1591,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="e6"
                       rows="1"
-                      value={this.state.e6}
+                      required value={this.state.e6}
                       onChange={this.changeE6Handler}
                     ></textarea>
                   </div>
@@ -1605,7 +1605,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="e7"
-                        value={this.state.e7}
+                        required value={this.state.e7}
                         onChange={this.changeE7Handler}
                       />
                     </div>
@@ -1619,7 +1619,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="e8"
-                        value={this.state.e8}
+                        required value={this.state.e8}
                         onChange={this.changeE8Handler}
                       />
                     </div>
@@ -1633,7 +1633,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="e9"
-                        value={this.state.e9}
+                        required value={this.state.e9}
                         onChange={this.changeE9Handler}
                       />
                     </div>
@@ -1647,7 +1647,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="e10"
-                        value={this.state.e10}
+                        required value={this.state.e10}
                         onChange={this.changeE10Handler}
                       />
                     </div>
@@ -1659,7 +1659,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="e11"
-                        value={this.state.e11}
+                        required value={this.state.e11}
                         onChange={this.changeE11Handler}
                       />
                     </div>
@@ -1671,7 +1671,7 @@ class AppraisalReport extends Component {
                         type="date"
                         className="form-control"
                         name="e12"
-                        value={this.state.e12}
+                        required value={this.state.e12}
                         onChange={this.changeE12Handler}
                       />
                     </div>
@@ -1693,7 +1693,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="f1"
                       rows="1"
-                      value={this.state.f1}
+                      required value={this.state.f1}
                       onChange={this.changeF1Handler}
                     ></textarea>
                   </div>
@@ -1715,7 +1715,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="f2"
                       rows="1"
-                      value={this.state.f2}
+                      required value={this.state.f2}
                       onChange={this.changeF2Handler}
                     ></textarea>
                   </div>
@@ -1730,7 +1730,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="f3"
                       rows="2"
-                      value={this.state.f3}
+                      required value={this.state.f3}
                       onChange={this.changeF3Handler}
                     ></textarea>
                   </div>
@@ -1747,7 +1747,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="f4"
                       rows="2"
-                      value={this.state.f4}
+                      required value={this.state.f4}
                       onChange={this.changeF4Handler}
                     ></textarea>
                   </div>
@@ -1763,7 +1763,7 @@ class AppraisalReport extends Component {
                       className="form-control"
                       name="f5"
                       rows="1"
-                      value={this.state.f5}
+                      required value={this.state.f5}
                       onChange={this.changeF5Handler}
                     ></textarea>
                   </div>
@@ -1777,7 +1777,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="f6"
-                        value={this.state.f6}
+                        required value={this.state.f6}
                         onChange={this.changeF6Handler}
                       />
                     </div>
@@ -1791,7 +1791,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="f7"
-                        value={this.state.f7}
+                        required value={this.state.f7}
                         onChange={this.changeF7Handler}
                       />
                     </div>
@@ -1805,7 +1805,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="f8"
-                        value={this.state.f8}
+                        required value={this.state.f8}
                         onChange={this.changeF8Handler}
                       />
                     </div>
@@ -1819,7 +1819,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="f9"
-                        value={this.state.f9}
+                        required value={this.state.f9}
                         onChange={this.changeF9Handler}
                       />
                     </div>
@@ -1831,7 +1831,7 @@ class AppraisalReport extends Component {
                         type="text"
                         className="form-control"
                         name="f10"
-                        value={this.state.f10}
+                        required value={this.state.f10}
                         onChange={this.changeF10Handler}
                       />
                     </div>
@@ -1843,7 +1843,7 @@ class AppraisalReport extends Component {
                         type="date"
                         className="form-control"
                         name="f11"
-                        value={this.state.f11}
+                        required value={this.state.f11}
                         onChange={this.changeF11Handler}
                       />
                     </div>

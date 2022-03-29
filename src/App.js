@@ -19,6 +19,7 @@ import AuthorityDashboard from './components/Authority/AuthorityDashboard';
 import PreviewReport from './components/Authority/PreviewReport';
 import AppraisalReport from './components/Employee/AppraisalReport';
 import Search from './components/Search';
+import EditSalary from './components/Admin/EditSalary';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
                           <Route path = "/auth-home" exact component = {AuthorityDashboard}></Route>
                           <Route path = "/preview/:id" exact component = {PreviewReport}></Route>
 
+                          <Route path = "/editsalary/:id" component = {EditSalary}></Route>
 
                           <Route path = "/listemployee" exact component = {ListEmployeeComponent}></Route>
                           <Route path = "/employees" component = {ListEmployeeComponent}></Route>

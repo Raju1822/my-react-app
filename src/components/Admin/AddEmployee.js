@@ -17,6 +17,7 @@ class AddEmployee extends Component {
       mobile: "",
       gender: "",
       doj:"",
+      address:"",
     };
   }
   changeFirstNameHandler = (event) => {
@@ -43,6 +44,9 @@ class AddEmployee extends Component {
   changeDojHandler = (event) => {
     this.setState({ doj: event.target.value });
   };
+  changeAddressHandler = (event) => {
+    this.setState({ address: event.target.value });
+  };
 
   SubmitForm = (e) => {
     // alert("hello"+ employee.firstName );
@@ -58,6 +62,7 @@ class AddEmployee extends Component {
       mobile: this.state.mobile,
       gender: this.state.gender,
       doj: this.state.doj,
+      address: this.state.address,
     };
     console.log("employee => " + JSON.stringify(employee));
     EmployeeService.createEmployee(employee);
@@ -95,7 +100,7 @@ class AddEmployee extends Component {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item ">
-                  <a className="nav-link" href="/">
+                  <a className="nav-link" href="##">
                     {" "}
                     <i class="fa fa-home mr-2"></i>
                      Admin <span className="sr-only">(current)</span>
@@ -134,14 +139,14 @@ class AddEmployee extends Component {
                     aria-labelledby="navbarDropdownMenuLink"
                   >
 
-                    <a className="dropdown-item" href="/">
-                      Something else here
+                    <a className="dropdown-item" href="##">
+                      Feature 1
                     </a>
-                    <a className="dropdown-item" href="/">
-                      Something else here 2
+                    <a className="dropdown-item" href="##">
+                      Feature 2
                     </a>
-                    <a className="dropdown-item" href="/">
-                      Something else here 3
+                    <a className="dropdown-item" href="##">
+                      Feature 3
                     </a>
                   </div>
                 </li>
@@ -255,6 +260,18 @@ class AddEmployee extends Component {
                   value={this.state.salary}
                   onChange={this.changeSalaryHandler}
                 />
+                </div>
+
+            <div className="form-group">
+                  <label> Address: </label>
+                  <input
+                    placeholder="Address"
+                    name="address"
+                    className="form-control"
+                    required
+                    value={this.state.address}
+                    onChange={this.changeAddressHandler}
+                  />
               </div>
               <button className="btn btn-primary m-2">
                 Submit

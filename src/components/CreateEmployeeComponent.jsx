@@ -10,7 +10,9 @@ class CreateEmployeeComponent extends Component {
             id: this.props.match.params.id,
             firstName: '',
             lastName: '',
-            emailId: ''
+            emailId: '',
+            mobile:'',
+            address:'',
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
@@ -28,14 +30,16 @@ class CreateEmployeeComponent extends Component {
                 let employee = res.data;
                 this.setState({firstName: employee.firstName,
                     lastName: employee.lastName,
-                    emailId : employee.emailId
+                    emailId : employee.emailId,
+                    mobile: employee.mobile,
+                    address: employee.address,
                 });
             });
         }
     }
     saveOrUpdateEmployee = (e) => {
         e.preventDefault();
-        let employee = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId};
+        let employee = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId, mobile: this.state.mobile, address: this.state.address};
         console.log('employee => ' + JSON.stringify(employee));
 
         // step 5
@@ -62,6 +66,13 @@ class CreateEmployeeComponent extends Component {
         this.setState({emailId: event.target.value});
     }
 
+    changeMobileHandler= (event) => {
+        this.setState({mobile: event.target.value});
+    }
+    changeAddressHandler= (event) => {
+        this.setState({address: event.target.value});
+    }
+
     cancel(){
         this.props.history.push('/employees');
     }
@@ -78,8 +89,9 @@ class CreateEmployeeComponent extends Component {
             <div>
                 <br></br>
                    <div className = "container">
+                   <div className="card border-0 shadow rounded-3 my-5">
                         <div className = "row">
-                            <div className = "card col-md-6 offset-md-3 offset-md-3">
+                            <div className="p-5">
                                 {
                                     this.getTitle()
 
@@ -104,13 +116,25 @@ class CreateEmployeeComponent extends Component {
                                                 value={this.state.emailId} onChange={this.changeEmailHandler}/>
                                         </div>
 
+                                        <div className = "form-group">
+                                            <label> Mobile Number: </label>
+                                            <input placeholder="Mobile Number" name="mobile" className="form-control"
+                                                value={this.state.mobile} onChange={this.changeMobileHandler}/>
+                                        </div>
+
+                                        <div className = "form-group">
+                                            <label> Address: </label>
+                                            <input placeholder="Address" name="address" className="form-control"
+                                                value={this.state.address} onChange={this.changeAddressHandler}/>
+                                        </div>
+
                                         <button className="btn btn-success" onClick={this.saveOrUpdateEmployee}>Save</button>
                                         <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
-
+                    </div>
                    </div>
             </div>
         )

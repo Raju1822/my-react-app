@@ -12,7 +12,6 @@ class AdminDashboard extends Component {
     this.state = {
       admin: [],
       staff: [],
-      TotalSalary:0,
     };
   }
   addEmployee() {
@@ -33,6 +32,12 @@ viewEmployee(employeeId){
   this.props.history.push(`/view-employee/${employeeId}`);
 }
 
+EditSalary(id){
+
+  this.props.history.push(`/editsalary/${id}`);
+
+}
+
   componentDidMount() {
     AdminService.getAdmin().then((res) => {
       this.setState({ admin: res.data });
@@ -49,12 +54,13 @@ viewEmployee(employeeId){
       })
   }
 
-//   Total(){
-
-//       this.state.staff.map((employee) => (
-//       this.state.TotalSalary +=  employee.salary
-//     ));
-// }
+  Total(){
+      let TotalSalary = 0;
+      this.state.staff.map((employee) => (
+      TotalSalary +=  employee.salary
+    ));
+    return TotalSalary;
+}
 
   render() {
     return (
@@ -161,8 +167,10 @@ viewEmployee(employeeId){
                       <p className="card-text">
                         <i className="fa fa-money fa-3x"></i>
                       </p>
-                      <p>0
-                        {/* {this.Total()}{this.state.TotalSalary} */}
+                      <p>
+                        {
+                          this.Total()
+                        }
                       </p>
                     </div>
                     <div className="bg-primary text-white">
@@ -315,18 +323,23 @@ viewEmployee(employeeId){
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <h4 className="font-italic mb-4">Personal information</h4>
-                      <p className="font-italic text-muted mb-2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                      </p>
+                      <h4 className="mb-4">Personal information</h4>
+
+
+
+                      <p class="text-muted m-5">
+                      {this.state.admin.map((adm) => (
+                        <p key={adm.id}>
+                          <strong> Admin : </strong>
+                          {adm.firstName} {adm.lastName} {adm.length}
+                        </p>
+
+
+                      ))}
+
+                    </p>
+
+
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -429,14 +442,16 @@ viewEmployee(employeeId){
                                 </td>
                                 <td> {employee.salary}</td>
                                 <td>
-                                  <a href="/salaryedit">
+
                                     <button
                                       style={{ marginLeft: "10px" }}
                                       className="btn btn-info"
+                                      onClick={() =>this.EditSalary(employee.id)
+                                      }
                                     >
                                       Edit
                                     </button>
-                                  </a>
+
                                 </td>
                               </tr>
                             ))}
@@ -450,17 +465,11 @@ viewEmployee(employeeId){
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <h4 className="font-italic mb-4">Others</h4>
-                      <p className="font-italic text-muted mb-2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                      <h4 className=" mb-4">Others</h4>
+                      <p className=" text-muted mb-2">
+                        <p>
+                          Nothing is here
+                        </p>
                       </p>
                     </div>
                   </div>

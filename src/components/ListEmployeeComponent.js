@@ -33,7 +33,7 @@ class ListEmployeeComponent extends Component {
     }
 
     addEmployee(){
-        this.props.history.push('/add-employee/_add');
+        this.props.history.push('/addemployee');
     }
 
     cancel(){

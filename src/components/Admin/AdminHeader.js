@@ -67,14 +67,14 @@ class AdminHeader extends Component {
                     aria-labelledby="navbarDropdownMenuLink"
                   >
 
-                    <a className="dropdown-item" href="/">
-                      Something else here
+                    <a className="dropdown-item" href="##">
+                      Feature 1
                     </a>
-                    <a className="dropdown-item" href="/">
-                      Something else here 2
+                    <a className="dropdown-item" href="##">
+                      Feature 2
                     </a>
-                    <a className="dropdown-item" href="/">
-                      Something else here 3
+                    <a className="dropdown-item" href="##">
+                      Feature 3
                     </a>
                   </div>
                 </li>
