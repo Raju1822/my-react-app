@@ -15,7 +15,7 @@ class EmployeeDashboard extends Component {
   }
 
   componentDidMount() {
-    const employeeId = 1;
+    const employeeId = 3;
     EmployeeService.getEmployeeById(employeeId).then((res) => {
       this.setState({ employees: res.data });
     });
