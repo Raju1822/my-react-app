@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const AUTH_API_BASE_URL = "http://localhost:8080/api/auth";
+// const AUTH_API_BASE_URL = "http://localhost:8080/api/auth";
 
-// const STAFF_API_BASE_URL = "https://spring2n23.herokuapp.com/api/staff";
+ const AUTH_API_BASE_URL = "https://spring2n23.herokuapp.com/api/auth";
 
 class StaffService{
 
