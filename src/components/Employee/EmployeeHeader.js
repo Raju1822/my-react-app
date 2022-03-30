@@ -43,7 +43,7 @@ class EmployeeHeader extends Component {
 
                 <li className="nav-item">
                   <a className="nav-link" href="/appraisal-report">
-                    <i className="fa fa-form mr-2" />
+                    <i className="fa fa-file mr-2" />
                     Create Appraisal
                   </a>
                 </li>

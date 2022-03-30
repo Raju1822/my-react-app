@@ -455,6 +455,15 @@ class AppraisalReport extends Component {
     alert("Form is submitted");
   };
 
+  cancel(){
+    window.location.href ="/employee-home";
+  }
+
+  PrintFunction(){
+
+    window.print();
+  }
+
   render() {
     return (
       <div className="container">
@@ -507,7 +516,8 @@ class AppraisalReport extends Component {
                       type="text"
                       className="form-control"
                       name="a1"
-                      required value={this.state.a1}
+                      required
+                      value={this.state.a1}
                       onChange={this.changeA1Handler}
                     />
                   </div>
@@ -1850,17 +1860,22 @@ class AppraisalReport extends Component {
                   </div>
                 </div>
               </div>
-              <button
-                type="button"
-                className="btn btn-primary m-2"
-                onClick={this.SubmitForm}
-              >
-                Submit
-              </button>
-              <a href="/employee-home" className="btn btn-success mx-4">
-                Cancel
-              </a>
+
+                  <button
+                    type="submit"
+                    className="btn btn-primary m-3 "
+                  >
+                    Submit
+                  </button>
+
             </form>
+                  <button  className="btn btn-danger m-3" onClick={this.cancel}>
+                    Cancel
+                  </button>
+
+                  <button  className="btn btn-success m-3" onClick={this.PrintFunction}>
+                    Create PDF
+                  </button>
           </div>
         </div>
       </div>
