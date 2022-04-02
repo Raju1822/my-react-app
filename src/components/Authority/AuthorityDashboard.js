@@ -85,7 +85,7 @@ class AuthorityDashboard extends Component {
   Total(){
     let TotalMessage = 0;
     this.state.staff.map((employee) => (
-    TotalMessage +=  employee.status
+      TotalMessage +=  employee.status
   ));
   return TotalMessage;
 }
@@ -112,9 +112,11 @@ class AuthorityDashboard extends Component {
               {this.state.auth.firstName} {this.state.auth.lastName}
             </p>
             <p>
+              <a href="#info">
               <button type="button" className="btn btn-primary m-2">
                 Profile
               </button>
+              </a>
               <button
                 type="button"
                 className="btn btn-secondary m-2"
@@ -129,7 +131,7 @@ class AuthorityDashboard extends Component {
 
           <div class="jumbotron text-center">
             <div class="row w-100">
-              <div class="col-md-3">
+              <div class="col-md-3 mb-2">
                 <div class="card border-info mx-sm-1 p-3">
                   <div class="card border-info shadow text-info p-3 my-card">
                     <span class="fa fa-file" aria-hidden="true"></span>
@@ -142,7 +144,7 @@ class AuthorityDashboard extends Component {
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 mb-2">
                 <div class="card border-success mx-sm-1 p-3">
                   <div class="card border-success shadow text-success p-3 my-card">
                     <span class="fa fa-envelope" aria-hidden="true"></span>
@@ -159,10 +161,10 @@ class AuthorityDashboard extends Component {
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 mb-2">
                 <div class="card border-danger mx-sm-1 p-3">
                   <div class="card border-danger shadow text-danger p-3 my-card">
-                    <span class="fa fa-info" aria-hidden="true"></span>
+                    <span class="fa fa-file" aria-hidden="true"></span>
                   </div>
                   <div class="text-danger text-center mt-3">
                     <h4>Information</h4>
@@ -247,7 +249,7 @@ class AuthorityDashboard extends Component {
         </div>
 
         {/* Appraisal report list */}
-        <div className="container pb-5">
+        <div className="container pb-5 px-3">
           <h2 className="text-center"> List of Appraisal Reports</h2>
 
           <br></br>
@@ -386,16 +388,9 @@ class AuthorityDashboard extends Component {
                     role="tabpanel"
                     aria-labelledby="v-pills-home-tab"
                   >
-                    <h4 class=" mb-4">Personal information</h4>
+                    <h4 class=" mb-4" id="info">Personal information</h4>
                     <p class="text-muted mb-2">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
+                      Name :  {this.state.auth.firstName} {this.state.auth.lastName}
                     </p>
                   </div>
 
@@ -465,8 +460,8 @@ class AuthorityDashboard extends Component {
                     role="tabpanel"
                     aria-labelledby="v-pills-messages-tab"
                   >
-                    <h4 class="font-italic mb-4">Reviews</h4>
-                    <p class="font-italic text-muted mb-2">
+                    <h4 class="mb-4">Reviews</h4>
+                    <p class="text-muted mb-2">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -484,8 +479,10 @@ class AuthorityDashboard extends Component {
                     role="tabpanel"
                     aria-labelledby="v-pills-settings-tab"
                   >
-                    <h4 class="font-italic mb-4">Employee Table</h4>
-                    <p class="font-italic text-muted mb-2">Hi</p>
+                    <h4 class="mb-4">Employee Table</h4>
+                    <p class="text-muted mb-2">
+                      Changes will appear here...
+                    </p>
                   </div>
                 </div>
               </div>

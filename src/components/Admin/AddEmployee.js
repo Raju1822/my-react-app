@@ -100,7 +100,7 @@ class AddEmployee extends Component {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item ">
-                  <a className="nav-link" href="##">
+                  <a className="nav-link" href="/admin">
                     {" "}
                     <i class="fa fa-home mr-2"></i>
                      Admin <span className="sr-only">(current)</span>
@@ -116,13 +116,13 @@ class AddEmployee extends Component {
 
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <a className="nav-link" href="/search">
                     <i class="fa fa-search mr-2"></i>
                     Search
                   </a>
                 </li>
 
-                <li className="nav-item dropdown">
+                {/* <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
                     href="/"
@@ -149,7 +149,7 @@ class AddEmployee extends Component {
                       Feature 3
                     </a>
                   </div>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <a className="nav-link" href="/contact">

@@ -86,9 +86,9 @@ EditSalary(id){
                 ))}
               </div>
               <p>
-                <button type="button" className="btn btn-primary m-2">
+               <a href="#info"> <button type="button" className="btn btn-primary m-2" >
                   Profile
-                </button>
+                </button></a>
                 <button
                   type="button"
                   className="btn btn-secondary m-2"
@@ -323,7 +323,7 @@ EditSalary(id){
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <h4 className="mb-4">Personal information</h4>
+                      <h4 className="mb-4" id="info">Personal information</h4>
 
 
 

@@ -39,7 +39,7 @@ class AuthHeader extends Component {
                   </a>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link" href="##">
                     <i className="fa fa-users mr-2" />
                     Something
@@ -71,7 +71,7 @@ class AuthHeader extends Component {
                       Something 3
                     </a>
                   </div>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <a className="nav-link" href="/search">

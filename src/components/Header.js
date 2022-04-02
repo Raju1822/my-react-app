@@ -69,9 +69,9 @@ class Header extends Component {
                     <a className="dropdown-item" href="/employee-login">
                       Employee Login
                     </a>
-                    <a className="dropdown-item" href="/">
+                    {/* <a className="dropdown-item" href="/">
                       Something else here
-                    </a>
+                    </a> */}
                   </div>
                 </li>
                 <li className="nav-item">

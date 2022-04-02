@@ -13,7 +13,7 @@ class Search extends Component {
       <>
         <Header />
         <div className="container card-body">
-          <div class="row mb-5">
+          <div class="row my-5">
 
             <div class="col-lg-8 mx-auto">
 
