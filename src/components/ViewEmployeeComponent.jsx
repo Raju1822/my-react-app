@@ -32,7 +32,7 @@ class ViewEmployeeComponent extends Component {
         <h3 className = "text-center pt-5"> View Employee Details</h3>
           <div className="text-center p-2">
            <img src={avatar} alt="profile-pic" width="15%"/>
-           <h5>Hi..!  { this.state.employees.firstName }  { this.state.employees.lastName }</h5>
+           <h5>{ this.state.employees.firstName }  { this.state.employees.lastName }</h5>
           </div>
 
 

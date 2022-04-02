@@ -38,8 +38,10 @@ class EmployeeDashboard extends Component {
      return <p>Your Appraisal report have been rejected.<br />Reason:<br /> {this.state.employees.reason} </p>
     else
     return <p>No new message here.</p>
+  }
 
-
+  Viewappraisal(Id){
+    this.props.history.push(`/viewappraisal/${Id}`);
   }
 
   render() {
@@ -60,9 +62,11 @@ class EmployeeDashboard extends Component {
               {this.state.employees.firstName} {this.state.employees.lastName}
             </p>
             <p>
-              <button type="button" className="btn btn-primary m-2">
-                Profile
-              </button>
+              <a href="#info">
+                <button type="button" className="btn btn-primary m-2">
+                  Profile
+                </button>
+              </a>
               <button
                 type="button"
                 className="btn btn-secondary m-2"
@@ -152,18 +156,17 @@ class EmployeeDashboard extends Component {
               <div class="col-md-9">
                 <div class="tab-content" id="v-pills-tabContent">
                   <div
-                    class=" tab-pane fade shadow rounded bg-white show active p-5"
+                    className=" tab-pane fade shadow rounded bg-white show active p-5"
                     id="v-pills-home"
                     role="tabpanel"
                     aria-labelledby="v-pills-home-tab"
                   >
-                    <h4 class=" mb-4">
-                      {" "}
-                      <b>Welcome : </b>
+                    <h4 className="mb-4" id="info">
+                      <b>Welcome Back : </b>
                       {this.state.employees.firstName}{" "}
                       {this.state.employees.lastName}
                     </h4>
-                    <p class="text-muted m-5 ">
+                    <p class="text-muted m-5">
                       <p>
                         <b> Employee Id: </b> {this.state.employees.id}{" "}
                       </p>
@@ -177,7 +180,13 @@ class EmployeeDashboard extends Component {
                         <b> Email Id: </b> {this.state.employees.emailId}{" "}
                       </p>
                       <p>
-                        <b> Salary: </b> {this.state.employees.salary}{" "}
+                        <b> Mobile: </b> {this.state.employees.mobile}{" "}
+                      </p>
+                      <p>
+                        <b> Address: </b> {this.state.employees.address}{" "}
+                      </p>
+                      <p>
+                        <b> Salary: </b> Rs. {this.state.employees.salary}/-{" "}
                       </p>
                     </p>
                   </div>
@@ -214,10 +223,8 @@ class EmployeeDashboard extends Component {
                             <td>{this.state.appraisal.a1}</td>
                             <td>{this.state.appraisal.b1}</td>
                             <td>
-                              <button
-                                style={{ marginLeft: "10px" }}
-                                className="btn btn-info"
-                              >
+                              <button className="btn btn-primary"
+                                 onClick={() =>this.Viewappraisal(this.state.appraisal.id)}>
                                 View
                               </button>
                             </td>

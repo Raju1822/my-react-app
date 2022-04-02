@@ -41,12 +41,12 @@ class EmployeeHeader extends Component {
                   </a>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link" href="/appraisal-report">
                     <i className="fa fa-file mr-2" />
                     Create Appraisal
                   </a>
-                </li>
+                </li> */}
 
 
 
@@ -59,23 +59,23 @@ class EmployeeHeader extends Component {
 
                     aria-expanded="false"
                   >
-                    <i class="fa fa-user mr-2"></i>
-                    Droupdown
+                    <i class="fa fa-file mr-2"></i>
+                    Forms
                   </a>
                   <div
                     className="dropdown-menu p-2 my-2"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
 
-                    <a className="dropdown-item" href="/">
-                      Something here
+                    <a className="dropdown-item" href="/appraisal-report">
+                      Create Appraisal
                     </a>
-                    <a className="dropdown-item" href="/">
-                      Something  2
+                    <a className="dropdown-item" href="##">
+                      Something
                     </a>
-                    <a className="dropdown-item" href="/">
+                    {/* <a className="dropdown-item" href="/">
                       Something  3
-                    </a>
+                    </a> */}
                   </div>
                 </li>
 

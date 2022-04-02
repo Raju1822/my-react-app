@@ -21,6 +21,7 @@ import AppraisalReport from './components/Employee/AppraisalReport';
 import Search from './components/Search';
 import EditSalary from './components/Admin/EditSalary';
 import Features from './components/Features';
+import ViewAppraisal from './components/Employee/ViewAppraisal';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
                           <Route path = "/preview/:id" exact component = {PreviewReport}></Route>
 
                           <Route path = "/editsalary/:id" component = {EditSalary}></Route>
+                          <Route path = "/viewappraisal/:id" component = {ViewAppraisal}></Route>
 
                           <Route path = "/listemployee" exact component = {ListEmployeeComponent}></Route>
                           <Route path = "/employees" component = {ListEmployeeComponent}></Route>

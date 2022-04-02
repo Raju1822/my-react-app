@@ -17,7 +17,7 @@ class Contact extends Component {
 
         <div className="container">
           <div className=" my-5">
-            <div className="text-center p-5">
+            <div className="text-center p-3">
               <h2>Developers</h2>
             </div>
 
@@ -43,10 +43,10 @@ class Contact extends Component {
 
                         <div class="icons ">
                           <h2>
-                            <a href="##" className="m-2 ">
+                            <a href="https://github.com/Raju1822" className="m-2 ">
                               <i class="fa fa-github-square "></i>
                             </a>
-                            <a href="##" className="m-2 ">
+                            <a href="https://www.linkedin.com/in/raju-sahu-3baa95176/" className="m-2 ">
                               <i class="fa fa-linkedin-square"></i>
                             </a>
                             <a href="##" className="m-2 ">
