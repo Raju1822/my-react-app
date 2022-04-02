@@ -20,6 +20,7 @@ import PreviewReport from './components/Authority/PreviewReport';
 import AppraisalReport from './components/Employee/AppraisalReport';
 import Search from './components/Search';
 import EditSalary from './components/Admin/EditSalary';
+import Features from './components/Features';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
 
                           <Route path = "/contact" component = {Contact}></Route>
                           <Route path = "/search" component = {Search}></Route>
+                          <Route path = "/feature" component = {Features}></Route>
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
                     </Switch>
                 </div>

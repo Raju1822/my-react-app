@@ -12,6 +12,7 @@ class AuthorityDashboard extends Component {
     this.state = {
       auth: [],
       appraisal: [],
+      staff:[],
       id: "",
       reason: "",
       status: "1",
@@ -42,6 +43,7 @@ class AuthorityDashboard extends Component {
     };
     console.log("emp => " + JSON.stringify(emp));
     EmployeeService.updateEmployeeReason(emp, this.state.id);
+    AppraisalService.deleteAppraisal(this.state.id);
     window.location.href = "/auth-home";
     alert("Appraisal form is rejected of employee Id: " + this.state.id);
   }
@@ -75,7 +77,18 @@ class AuthorityDashboard extends Component {
       const longeur = res.data.length;
       this.setState({ appraisal: res.data, persons, longeur });
     });
+    EmployeeService.getEmployees().then((res) => {
+      this.setState({ staff: res.data});
+    });
   }
+
+  Total(){
+    let TotalMessage = 0;
+    this.state.staff.map((employee) => (
+    TotalMessage +=  employee.status
+  ));
+  return TotalMessage;
+}
 
   logout() {
     alert("You will be logout..!");
@@ -138,7 +151,11 @@ class AuthorityDashboard extends Component {
                     <h4>Messages</h4>
                   </div>
                   <div class="text-success text-center mt-2">
-                    <h1>000</h1>
+                    <h1>
+                      {
+                        this.Total()
+                      }
+                    </h1>
                   </div>
                 </div>
               </div>
@@ -151,7 +168,7 @@ class AuthorityDashboard extends Component {
                     <h4>Information</h4>
                   </div>
                   <div class="text-danger text-center mt-2">
-                    <h1>000</h1>
+                    <h1>0</h1>
                   </div>
                 </div>
               </div>
@@ -164,7 +181,7 @@ class AuthorityDashboard extends Component {
                     <h4>Approved</h4>
                   </div>
                   <div class="text-warning text-center mt-2">
-                    <h1>000</h1>
+                    <h1>0</h1>
                   </div>
                 </div>
               </div>

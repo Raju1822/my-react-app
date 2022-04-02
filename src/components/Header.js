@@ -75,8 +75,8 @@ class Header extends Component {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    <i className="fa fa-file mr-2" />
+                  <a className="nav-link" href="/feature">
+                    <i className="fa fa-star mr-2" />
                     Features
                   </a>
                 </li>

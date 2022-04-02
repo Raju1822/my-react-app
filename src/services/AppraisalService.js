@@ -18,6 +18,10 @@ class AppraisalService{
         return axios.get(APPRAISAL_API_BASE_URL + '/' + appraisalId);
     }
 
+    deleteAppraisal(Id){
+        return axios.delete(APPRAISAL_API_BASE_URL + "/" + Id);
+    }
+
 }
 
 export default new AppraisalService()
