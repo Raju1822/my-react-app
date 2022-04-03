@@ -13,7 +13,7 @@ class FooterComponent extends Component {
         return (
             <div className='container'>
                 <footer className = "text-center footer p-4">
-                    <span className="text-muted ">All Rights Reserved @Raju_Sahu 2022</span>
+                    <span className="text-muted ">All Rights Reserved &copy;Raju Sahu  {new Date().toLocaleString()}</span>
                 </footer>
             </div>
         )
