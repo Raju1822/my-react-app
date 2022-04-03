@@ -120,8 +120,6 @@ class AuthorityDashboard extends Component {
               <button
                 type="button"
                 className="btn btn-secondary m-2"
-                data-toggle="modal"
-                data-target="#myModal"
                 onClick={this.logout}
               >
                 Logout
