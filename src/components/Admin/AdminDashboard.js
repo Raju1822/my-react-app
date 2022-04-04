@@ -6,37 +6,38 @@ import Admin from "../img/admin.png";
 import AdminHeader from "./AdminHeader";
 import EmployeeService from "../../services/EmployeeService";
 import AppraisalService from "../../services/AppraisalService";
+import ContactService from "../../services/ContactService";
+
 class AdminDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       admin: [],
       staff: [],
+      contact: [],
     };
   }
   addEmployee() {
-    // alert("Employee add feature comming soon........!");
     window.location.href = "/addemployee";
   }
-  deleteEmployee(employeeId){
-    // alert("Hell" + employeeId);
-    // return axios.delete(EMPLOYEE_API_BASE_URL + '/' + employeeId);
+
+  deleteEmployee(employeeId) {
     EmployeeService.deleteEmployee(employeeId);
     alert("Employee of id " + employeeId + " is removed");
-    window.location.reload();
-}
-editEmployee(employeeId){
-  this.props.history.push(`/add-employee/${employeeId}`);
-}
-viewEmployee(employeeId){
-  this.props.history.push(`/view-employee/${employeeId}`);
-}
+    this.props.history.push(`/contact/`);
+  }
 
-EditSalary(id){
+  editEmployee(employeeId) {
+    this.props.history.push(`/add-employee/${employeeId}`);
+  }
 
-  this.props.history.push(`/editsalary/${id}`);
+  viewEmployee(employeeId) {
+    this.props.history.push(`/view-employee/${employeeId}`);
+  }
 
-}
+  EditSalary(id) {
+    this.props.history.push(`/editsalary/${id}`);
+  }
 
   componentDidMount() {
     AdminService.getAdmin().then((res) => {
@@ -45,29 +46,35 @@ EditSalary(id){
     EmployeeService.getEmployees().then((res) => {
       const persons = res.data;
       const longeur = res.data.length;
-      this.setState({ staff: res.data ,persons, longeur});
+      this.setState({ staff: res.data, persons, longeur });
     });
-
-    AppraisalService.getAllAppraisal().then(res => {
+    AppraisalService.getAllAppraisal().then((res) => {
       const TotalAppraisal = res.data.length;
-        this.setState({ TotalAppraisal });
-      })
+      this.setState({ TotalAppraisal });
+    });
+    ContactService.getContact().then((res) => {
+      const messages = res.data.length;
+      this.setState({ contact: res.data, messages });
+    });
   }
 
-  Total(){
-      let TotalSalary = 0;
-      this.state.staff.map((employee) => (
-      TotalSalary +=  employee.salary
-    ));
+  // Contact message delete function
+  DeleteMessage(messageid){
+    ContactService.deleteMessage(messageid);
+    alert("Message is deleted")
+    window.location.reload();
+  }
+
+  Total() {
+    let TotalSalary = 0;
+    this.state.staff.map((employee) => (TotalSalary += employee.salary));
     return TotalSalary;
-}
+  }
 
   render() {
     return (
       <>
-
-      <AdminHeader />
-
+        <AdminHeader />
 
         <main role="main" className="">
           <section className="jumbotron text-center">
@@ -79,16 +86,18 @@ EditSalary(id){
               <div className="lead ">
                 {this.state.admin.map((adm) => (
                   <p key={adm.id}>
-                    {" "}
                     <strong> Admin : </strong>
-                    {adm.firstName} {adm.lastName} {adm.length}
+                    {adm.firstName} {adm.lastName}
                   </p>
                 ))}
               </div>
               <p>
-               <a href="#info"> <button type="button" className="btn btn-primary m-2" >
-                  Profile
-                </button></a>
+                <a href="#info">
+                  {" "}
+                  <button type="button" className="btn btn-primary m-2">
+                    Profile
+                  </button>
+                </a>
                 <button
                   type="button"
                   className="btn btn-secondary m-2"
@@ -132,62 +141,58 @@ EditSalary(id){
             </div>
           </div>
           {/* Album Page  */}
-          <div className="album py-5 bg-light">
-            <div className="container">
+          <div className="container">
+            <div className="p-5 bg-info">
               <div className="row">
-                <div className="col-md-3">
-                  <div className="card mb-4 box-shadow text-center">
+                <div className="col-md-3 mb-2">
+                  <div className="card shadow text-center">
                     <div className="m-3">
                       <p className="card-text">
-                        <i className="fa fa-users fa-3x"></i>
+                        <i className="fa fa-users fa-2x"></i>
                       </p>
-                       <p> 0{ this.state.longeur}</p>
+                      <p>{this.state.longeur}</p>
                     </div>
                     <div className="bg-warning text-white">
-                      <p>Total Employess</p>
+                      <p className="pt-2">Total Employess</p>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-3">
-                  <div className="card mb-4 box-shadow text-center">
+                <div className="col-md-3 mb-2">
+                  <div className="card shadow text-center">
                     <div className="m-3">
                       <p className="card-text">
-                        <i className="fa fa-file fa-3x"></i>
+                        <i className="fa fa-file fa-2x"></i>
                       </p>
-                      <p>0{ this.state.TotalAppraisal}</p>
+                      <p>{this.state.TotalAppraisal}</p>
                     </div>
                     <div className="bg-success text-white">
-                      <p>Total Report</p>
+                      <p className="pt-2">Total Report</p>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-3">
-                  <div className="card mb-4 box-shadow text-center">
+                <div className="col-md-3 mb-2">
+                  <div className="card shadow text-center">
                     <div className="m-3">
                       <p className="card-text">
-                        <i className="fa fa-money fa-3x"></i>
+                        <i className="fa fa-money fa-2x"></i>
                       </p>
-                      <p>
-                        {
-                          this.Total()
-                        }
-                      </p>
+                      <p>{this.Total()}</p>
                     </div>
                     <div className="bg-primary text-white">
-                      <p>Total Salary</p>
+                      <p className="pt-2">Total Salary</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-3">
-                  <div className="card mb-4 box-shadow text-center">
+                  <div className="card shadow text-center">
                     <div className="m-3">
                       <p className="card-text">
-                        <i className="fa fa-bell fa-3x"></i>
+                        <i className="fa fa-bell fa-2x"></i>
                       </p>
-                      <p>03</p>
+                      <p>{this.state.messages}</p>
                     </div>
                     <div className="bg-danger text-white">
-                      <p>Notification</p>
+                      <p className="pt-2">Notification</p>
                     </div>
                   </div>
                 </div>
@@ -195,60 +200,67 @@ EditSalary(id){
             </div>
           </div>
 
+          {/*        Employee Details here    */}
 
-{/*        Employee Details here    */}
+          <div className="container p-4 mt-5">
+            <h2 className="text-center">Employees List </h2>
 
-<div className='container p-5'>
-                 <h2 className="text-center">Employees List </h2>
-
-                 <br></br>
-                 <div className = " overflow-auto row">
-                        <table className = "table table-striped table-bordered">
-
-                            <thead>
-                                <tr>
-                                    <th> Employee First Name</th>
-                                    <th> Employee Last Name</th>
-                                    <th> Employee Email Id</th>
-                                    <th> Update</th>
-                                    <th>Delete</th>
-                                    <th>View</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    this.state.staff.map(
-                                        employee =>
-                                        <tr key = {employee.id}>
-                                             <td> { employee.firstName} </td>
-                                             <td> {employee.lastName}</td>
-                                             <td> {employee.emailId}</td>
-                                             <td><button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button> </td>
-                                             <td><button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button></td>
-                                             <td><button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">View </button></td>
-                                        </tr>
-                                    )
-                                }
-                            </tbody>
-
-                        </table>
-
-                 </div>
-                <div className='row'>
-
-                </div>
-
+            <br></br>
+            <div className="overflow-auto row">
+              <table className="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th> Employee First Name</th>
+                    <th> Employee Last Name</th>
+                    <th> Employee Email Id</th>
+                    <th> Update</th>
+                    <th>Delete</th>
+                    <th>View</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.staff.map((employee) => (
+                    <tr key={employee.id}>
+                      <td> {employee.firstName} </td>
+                      <td> {employee.lastName}</td>
+                      <td> {employee.emailId}</td>
+                      <td>
+                        <button
+                          onClick={() => this.editEmployee(employee.id)}
+                          className="btn btn-info"
+                        >
+                          Update{" "}
+                        </button>{" "}
+                      </td>
+                      <td>
+                        <button
+                          style={{ marginLeft: "10px" }}
+                          onClick={() => this.deleteEmployee(employee.id)}
+                          className="btn btn-danger"
+                        >
+                          Delete{" "}
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          style={{ marginLeft: "10px" }}
+                          onClick={() => this.viewEmployee(employee.id)}
+                          className="btn btn-warning"
+                        >
+                          View{" "}
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-
-
-
-
-
-
+            <div className="row"></div>
+          </div>
 
           {/* Slider page verticle nav */}
-          <section className="py-5 header">
-            <div className="container py-4">
+          <section className="py-4 header">
+            <div className="container">
               <div className="row">
                 <div className="col-md-3">
                   <div
@@ -308,9 +320,9 @@ EditSalary(id){
                       aria-controls="v-pills-settings"
                       aria-selected="false"
                     >
-                      <i className="fa fa-calendar-minus-o mr-2"></i>
+                      <i className="fa fa-bell mr-2"></i>
                       <span className="font-weight-bold small text-uppercase">
-                        Others
+                        Messages
                       </span>
                     </a>
                   </div>
@@ -323,23 +335,18 @@ EditSalary(id){
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <h4 className="mb-4" id="info">Personal information</h4>
-
-
+                      <h4 className="mb-4" id="info">
+                        Personal information
+                      </h4>
 
                       <p class="text-muted m-5">
-                      {this.state.admin.map((adm) => (
-                        <p key={adm.id}>
-                          <strong> Admin : </strong>
-                          {adm.firstName} {adm.lastName} {adm.length}
-                        </p>
-
-
-                      ))}
-
-                    </p>
-
-
+                        {this.state.admin.map((adm) => (
+                          <p key={adm.id}>
+                            <strong> Admin : </strong>
+                            {adm.firstName} {adm.lastName}
+                          </p>
+                        ))}
+                      </p>
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -404,7 +411,7 @@ EditSalary(id){
                                     onClick={() =>
                                       this.viewEmployee(employee.id)
                                     }
-                                    className="btn btn-info"
+                                    className="btn btn-success"
                                   >
                                     View
                                   </button>
@@ -437,21 +444,17 @@ EditSalary(id){
                               <tr key={employee.id}>
                                 <td>{employee.id}</td>
                                 <td>
-                                  {" "}
                                   {employee.firstName} {employee.lastName}
                                 </td>
                                 <td> {employee.salary}</td>
                                 <td>
-
-                                    <button
-                                      style={{ marginLeft: "10px" }}
-                                      className="btn btn-info"
-                                      onClick={() =>this.EditSalary(employee.id)
-                                      }
-                                    >
-                                      Edit
-                                    </button>
-
+                                  <button
+                                    style={{ marginLeft: "10px" }}
+                                    className="btn btn-info"
+                                    onClick={() => this.EditSalary(employee.id)}
+                                  >
+                                    Edit
+                                  </button>
                                 </td>
                               </tr>
                             ))}
@@ -465,11 +468,29 @@ EditSalary(id){
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <h4 className=" mb-4">Others</h4>
-                      <p className=" text-muted mb-2">
-                        <p>
-                          Nothing is here
-                        </p>
+                      <h4 className=" mb-4">Messages:</h4>
+                      <p className="mb-2">
+                        {this.state.contact.map((info) => (
+                          <p key={info.id}>
+                            <div className="card shadow-sm p-3">
+                              <p className="text-center p-2 lead">
+                                <u>{info.fullName} </u>
+                              </p>
+                              {/* <p className="text-muted text-center">{info.emailId}</p> */}
+                              <p className="p-2">{info.message}</p>
+
+                              <button
+                                type="button"
+                                className="btn btn-outline-secondary"
+                                onClick={() =>
+                                  this.DeleteMessage(info.id)
+                                }
+                              >
+                                Delete Message
+                              </button>
+                            </div>
+                          </p>
+                        ))}
                       </p>
                     </div>
                   </div>

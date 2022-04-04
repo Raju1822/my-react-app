@@ -15,6 +15,10 @@ class ContactService{
         return axios.post(CONTACT_API_BASE_URL, mails);
     }
 
+    deleteMessage(Id) {
+        return axios.delete(CONTACT_API_BASE_URL + "/" + Id);
+      }
+
 
 }
 

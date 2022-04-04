@@ -162,7 +162,7 @@ class AuthorityDashboard extends Component {
               <div class="col-md-3 mb-2">
                 <div class="card border-danger mx-sm-1 p-3">
                   <div class="card border-danger shadow text-danger p-3 my-card">
-                    <span class="fa fa-file" aria-hidden="true"></span>
+                    <span class="fa fa-info-circle" aria-hidden="true"></span>
                   </div>
                   <div class="text-danger text-center mt-3">
                     <h4>Information</h4>

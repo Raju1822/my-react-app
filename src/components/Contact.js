@@ -37,7 +37,8 @@ class Contact extends Component {
     console.log("mails => " + JSON.stringify(mails));
     ContactService.createContact(mails);
 
-    alert(this.state.Name +" your message is send to admin");
+    alert(this.state.Name +" your message is send to Admin");
+    window.location.reload();
   }
 
 
