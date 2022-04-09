@@ -36,7 +36,7 @@ class EmployeeHeader extends Component {
                 <li className="nav-item active">
                   <a className="nav-link" href="##">
                     {" "}
-                    <i class="fa fa-home mr-2"></i>
+                    <i className="fa fa-home mr-2"></i>
                      My Profile <span className="sr-only">(current)</span>
                   </a>
                 </li>
@@ -59,7 +59,7 @@ class EmployeeHeader extends Component {
 
                     aria-expanded="false"
                   >
-                    <i class="fa fa-file mr-2"></i>
+                    <i className="fa fa-file mr-2"></i>
                     Forms
                   </a>
                   <div
@@ -81,7 +81,7 @@ class EmployeeHeader extends Component {
 
                 <li className="nav-item">
                   <a className="nav-link" href="/">
-                    <i class="fa fa-search mr-2"></i>
+                    <i className="fa fa-search mr-2"></i>
                     Search
                   </a>
                 </li>
@@ -89,7 +89,7 @@ class EmployeeHeader extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="/contact">
                     {" "}
-                    <i class="fa fa-phone mr-2"></i>
+                    <i className="fa fa-phone mr-2"></i>
                     Contact
                   </a>
                 </li>

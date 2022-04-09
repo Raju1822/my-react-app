@@ -24,8 +24,8 @@ class Home extends Component {
     this.setState({ password: event.target.value });
   };
 
-  SubmitForm = (e) => {
-    e.preventDefault();
+  SubmitForm = () => {
+    // e.preventDefault();
     let admin = {
       emailId: this.state.emailId,
       password: this.state.password,
@@ -52,8 +52,8 @@ class Home extends Component {
 
 
         <div className="container">
-        <div class="row">
-        <div class="col-sm-8">
+        <div className="row">
+        <div className="col-sm-8">
             <div className="col-md-8 text-center display-6 pt-5 ">
               <img className="img-fluid" src={logo} alt="pictures" width="60%"/>
               <p className="pt-3">National Institute of Technology </p>
@@ -61,7 +61,7 @@ class Home extends Component {
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div className="col-sm-4">
             <div className="text-center my-2">
               <h1 className="display-4">Admin Portal</h1>
 
@@ -84,7 +84,7 @@ class Home extends Component {
                         value={this.state.emailId}
                   onChange={this.changeEmailHandler}
                       />
-                      <label for="email">Email address</label>
+                      <label htmlFor="email">Email address</label>
                     </div>
                     <div className="form-floating mb-3">
                       <input
@@ -95,10 +95,11 @@ class Home extends Component {
                         id="password"
                         required
 
+
                         value={this.state.password}
                   onChange={this.changePasswordHandler}
                       />
-                      <label for="password">Password</label>
+                      <label htmlFor="password">Password</label>
                     </div>
 
                     <div className="form-check mb-3">
@@ -111,7 +112,7 @@ class Home extends Component {
                       />
                       <label
                         className="form-check-label"
-                        for="rememberPasswordCheck"
+                        htmlFor="rememberPasswordCheck"
                       >
                         Remember password
                       </label>

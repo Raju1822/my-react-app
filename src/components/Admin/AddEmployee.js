@@ -102,7 +102,7 @@ class AddEmployee extends Component {
                 <li className="nav-item ">
                   <a className="nav-link" href="/admin">
                     {" "}
-                    <i class="fa fa-home mr-2"></i>
+                    <i className="fa fa-home mr-2"></i>
                      Admin <span className="sr-only">(current)</span>
                   </a>
                 </li>
@@ -117,7 +117,7 @@ class AddEmployee extends Component {
 
                 <li className="nav-item">
                   <a className="nav-link" href="/search">
-                    <i class="fa fa-search mr-2"></i>
+                    <i className="fa fa-search mr-2"></i>
                     Search
                   </a>
                 </li>
@@ -131,7 +131,7 @@ class AddEmployee extends Component {
 
                     aria-expanded="false"
                   >
-                    <i class="fa fa-user mr-2"></i>
+                    <i className="fa fa-user mr-2"></i>
                     Logins
                   </a>
                   <div
@@ -154,7 +154,7 @@ class AddEmployee extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="/contact">
                     {" "}
-                    <i class="fa fa-phone mr-2"></i>
+                    <i className="fa fa-phone mr-2"></i>
                     Contact
                   </a>
                 </li>

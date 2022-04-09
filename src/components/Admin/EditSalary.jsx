@@ -58,23 +58,23 @@ class EditSalary extends Component {
 
 
               <form>
-                <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Employee Name</label>
-                    <div class="col-sm-10">
-                    <input type="text" disabled class="form-control text-center" id="staticEmail" value={this.state.firstName +" "+ this.state.lastName} />
+                <div className="form-group row">
+                    <label for="staticEmail" className="col-sm-2 col-form-label">Employee Name</label>
+                    <div className="col-sm-10">
+                    <input type="text" disabled className="form-control text-center" id="staticEmail" value={this.state.firstName +" "+ this.state.lastName} />
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Salary</label>
-                    <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword"
+                <div className="form-group row">
+                    <label for="inputPassword" className="col-sm-2 col-form-label">Salary</label>
+                    <div className="col-sm-10">
+                    <input type="text" className="form-control" id="inputPassword"
                     value={this.state.salary}
                     onChange={this.changeSalaryHandler}
 
                      />
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary" onClick={this.UpdateEmployeeSalary}>Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={this.UpdateEmployeeSalary}>Submit</button>
                 <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
             </form>
 
@@ -91,7 +91,7 @@ class EditSalary extends Component {
                         value={this.state.salary}
                     />
                     </div>
-                 <button type="submit" class="btn btn-primary">Submit</button> */}
+                 <button type="submit" className="btn btn-primary">Submit</button> */}
 
 
 

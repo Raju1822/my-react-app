@@ -36,7 +36,7 @@ class ViewEmployeeComponent extends Component {
           </div>
 
 
-           <p class="overflow-auto text-center mx-5">
+           <p className="overflow-auto text-center mx-5">
                       <table className="table table-bordered">
                         <thead></thead>
 

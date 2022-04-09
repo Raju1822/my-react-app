@@ -81,18 +81,18 @@ class EmployeeDashboard extends Component {
         </section>
 
         {/* main page container  */}
-        <section class="header">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
+        <section className="header">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
                 <div
-                  class="nav flex-column nav-pills nav-pills-custom"
+                  className="nav flex-column nav-pills nav-pills-custom"
                   id="v-pills-tab"
                   role="tablist"
                   aria-orientation="vertical"
                 >
                   <a
-                    class="nav-link mb-3 p-3 shadow active"
+                    className="nav-link mb-3 p-3 shadow active"
                     id="v-pills-home-tab"
                     data-toggle="pill"
                     href="#v-pills-home"
@@ -100,14 +100,14 @@ class EmployeeDashboard extends Component {
                     aria-controls="v-pills-home"
                     aria-selected="true"
                   >
-                    <i class="fa fa-user-circle-o mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-user-circle-o mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Personal information
                     </span>
                   </a>
 
                   <a
-                    class="nav-link mb-3 p-3 shadow"
+                    className="nav-link mb-3 p-3 shadow"
                     id="v-pills-profile-tab"
                     data-toggle="pill"
                     href="#v-pills-profile"
@@ -115,14 +115,14 @@ class EmployeeDashboard extends Component {
                     aria-controls="v-pills-profile"
                     aria-selected="false"
                   >
-                    <i class="fa fa-calendar-minus-o mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-calendar-minus-o mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Appraisal Report
                     </span>
                   </a>
 
                   <a
-                    class="nav-link mb-3 p-3 shadow"
+                    className="nav-link mb-3 p-3 shadow"
                     id="v-pills-messages-tab"
                     data-toggle="pill"
                     href="#v-pills-messages"
@@ -130,14 +130,14 @@ class EmployeeDashboard extends Component {
                     aria-controls="v-pills-messages"
                     aria-selected="false"
                   >
-                    <i class="fa fa-star mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-star mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Information
                     </span>
                   </a>
 
                   <a
-                    class="nav-link mb-3 p-3 shadow"
+                    className="nav-link mb-3 p-3 shadow"
                     id="v-pills-settings-tab"
                     data-toggle="pill"
                     href="#v-pills-settings"
@@ -145,16 +145,16 @@ class EmployeeDashboard extends Component {
                     aria-controls="v-pills-settings"
                     aria-selected="false"
                   >
-                    <i class="fa fa-envelope mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-envelope mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Messages
                     </span>
                   </a>
                 </div>
               </div>
 
-              <div class="col-md-9">
-                <div class="tab-content" id="v-pills-tabContent">
+              <div className="col-md-9">
+                <div className="tab-content" id="v-pills-tabContent">
                   <div
                     className=" tab-pane fade shadow rounded bg-white show active p-5"
                     id="v-pills-home"
@@ -166,7 +166,7 @@ class EmployeeDashboard extends Component {
                       {this.state.employees.firstName}{" "}
                       {this.state.employees.lastName}
                     </h4>
-                    <p class="text-muted m-5">
+                    <p className="text-muted m-5">
                       <p>
                         <b> Employee Id: </b> {this.state.employees.id}{" "}
                       </p>
@@ -192,12 +192,12 @@ class EmployeeDashboard extends Component {
                   </div>
 
                   <div
-                    class="tab-pane fade shadow rounded bg-white p-5"
+                    className="tab-pane fade shadow rounded bg-white p-5"
                     id="v-pills-profile"
                     role="tabpanel"
                     aria-labelledby="v-pills-profile-tab"
                   >
-                    <h4 class="text-center mb-4">
+                    <h4 className="text-center mb-4">
                       Appraisal Report{" "}
                       <a
                         href="/appraisal-report"
@@ -207,7 +207,7 @@ class EmployeeDashboard extends Component {
                       </a>
                     </h4>
 
-                    <p class="overflow-auto text-muted mb-2 text-center">
+                    <p className="overflow-auto text-muted mb-2 text-center">
                       <table className="table table-bordered">
                         <thead>
                           <tr>
@@ -235,19 +235,19 @@ class EmployeeDashboard extends Component {
                   </div>
 
                   <div
-                    class="tab-pane fade shadow rounded bg-white p-5"
+                    className="tab-pane fade shadow rounded bg-white p-5"
                     id="v-pills-messages"
                     role="tabpanel"
                     aria-labelledby="v-pills-messages-tab"
                   >
-                    <h4 class=" mb-4 text-center">
+                    <h4 className=" mb-4 text-center">
                       Department : department of employee
                     </h4>
 
                     <h5 className="text-center">Year:2022-23</h5>
                     <p className=" text-center">Time Table</p>
                     <div className="overflow-auto">
-                      <table class="table table-bordered no-more-tables text-center">
+                      <table className="table table-bordered no-more-tables text-center">
                         <thead>
                           <tr>
                             <th>Day</th>
@@ -294,13 +294,13 @@ class EmployeeDashboard extends Component {
                   </div>
 
                   <div
-                    class="tab-pane fade shadow rounded bg-white p-5"
+                    className="tab-pane fade shadow rounded bg-white p-5"
                     id="v-pills-settings"
                     role="tabpanel"
                     aria-labelledby="v-pills-settings-tab"
                   >
-                    <h4 class=" mb-4">Messages</h4>
-                    <p class="text-muted mb-2">
+                    <h4 className=" mb-4">Messages</h4>
+                    <p className="text-muted mb-2">
                       {
                         this.getMesaage()
                       }

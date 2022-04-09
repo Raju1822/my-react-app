@@ -339,7 +339,7 @@ class AdminDashboard extends Component {
                         Personal information
                       </h4>
 
-                      <p class="text-muted m-5">
+                      <p className="text-muted m-5">
                         {this.state.admin.map((adm) => (
                           <p key={adm.id}>
                             <strong> Admin : </strong>

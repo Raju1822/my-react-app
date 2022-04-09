@@ -47,8 +47,8 @@ class AuthorityLogin extends Component {
       <Header />
 
       <div className="container">
-        <div class="row">
-        <div class="col-sm-8">
+        <div className="row">
+        <div className="col-sm-8">
             <div className="col-md-8 text-center display-6 pt-5 ">
               <img className="img-fluid" src={logo} alt="pictures" width="60%"/>
               <p className="pt-3">National Institute of Technology </p>
@@ -56,7 +56,7 @@ class AuthorityLogin extends Component {
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div className="col-sm-4">
             <div className="text-center my-2">
               <h1 className="display-4">Authority Portal</h1>
               <div className="card border-0 shadow rounded-3 my-4 ">

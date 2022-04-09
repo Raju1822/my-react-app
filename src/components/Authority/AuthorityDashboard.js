@@ -127,30 +127,30 @@ class AuthorityDashboard extends Component {
             </p>
           </div>
 
-          <div class="jumbotron text-center">
-            <div class="row w-100">
-              <div class="col-md-3 mb-2">
-                <div class="card border-info mx-sm-1 p-3">
-                  <div class="card border-info shadow text-info p-3 my-card">
-                    <span class="fa fa-file" aria-hidden="true"></span>
+          <div className="jumbotron text-center">
+            <div className="row w-100">
+              <div className="col-md-3 mb-2">
+                <div className="card border-info mx-sm-1 p-3">
+                  <div className="card border-info shadow text-info p-3 my-card">
+                    <span className="fa fa-file" aria-hidden="true"></span>
                   </div>
-                  <div class="text-info text-center mt-3">
+                  <div className="text-info text-center mt-3">
                     <h4>Appraisal Report</h4>
                   </div>
-                  <div class="text-info text-center mt-2">
+                  <div className="text-info text-center mt-2">
                     <h1>0{this.state.longeur}</h1>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 mb-2">
-                <div class="card border-success mx-sm-1 p-3">
-                  <div class="card border-success shadow text-success p-3 my-card">
-                    <span class="fa fa-envelope" aria-hidden="true"></span>
+              <div className="col-md-3 mb-2">
+                <div className="card border-success mx-sm-1 p-3">
+                  <div className="card border-success shadow text-success p-3 my-card">
+                    <span className="fa fa-envelope" aria-hidden="true"></span>
                   </div>
-                  <div class="text-success text-center mt-3">
+                  <div className="text-success text-center mt-3">
                     <h4>Messages</h4>
                   </div>
-                  <div class="text-success text-center mt-2">
+                  <div className="text-success text-center mt-2">
                     <h1>
                       {
                         this.Total()
@@ -159,28 +159,28 @@ class AuthorityDashboard extends Component {
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 mb-2">
-                <div class="card border-danger mx-sm-1 p-3">
-                  <div class="card border-danger shadow text-danger p-3 my-card">
-                    <span class="fa fa-info-circle" aria-hidden="true"></span>
+              <div className="col-md-3 mb-2">
+                <div className="card border-danger mx-sm-1 p-3">
+                  <div className="card border-danger shadow text-danger p-3 my-card">
+                    <span className="fa fa-info-circle" aria-hidden="true"></span>
                   </div>
-                  <div class="text-danger text-center mt-3">
+                  <div className="text-danger text-center mt-3">
                     <h4>Information</h4>
                   </div>
-                  <div class="text-danger text-center mt-2">
+                  <div className="text-danger text-center mt-2">
                     <h1>0</h1>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="card border-warning mx-sm-1 p-3">
-                  <div class="card border-warning shadow text-warning p-3 my-card">
-                    <span class="fa fa-thumbs-up" aria-hidden="true"></span>
+              <div className="col-md-3">
+                <div className="card border-warning mx-sm-1 p-3">
+                  <div className="card border-warning shadow text-warning p-3 my-card">
+                    <span className="fa fa-thumbs-up" aria-hidden="true"></span>
                   </div>
-                  <div class="text-warning text-center mt-3">
+                  <div className="text-warning text-center mt-3">
                     <h4>Approved</h4>
                   </div>
-                  <div class="text-warning text-center mt-2">
+                  <div className="text-warning text-center mt-2">
                     <h1>0</h1>
                   </div>
                 </div>
@@ -306,18 +306,18 @@ class AuthorityDashboard extends Component {
         </div>
 
         {/* main page container  */}
-        <section class="header">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
+        <section className="header">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
                 <div
-                  class="nav flex-column nav-pills nav-pills-custom"
+                  className="nav flex-column nav-pills nav-pills-custom"
                   id="v-pills-tab"
                   role="tablist"
                   aria-orientation="vertical"
                 >
                   <a
-                    class="nav-link mb-3 p-3 shadow active"
+                    className="nav-link mb-3 p-3 shadow active"
                     id="v-pills-home-tab"
                     data-toggle="pill"
                     href="#v-pills-home"
@@ -325,14 +325,14 @@ class AuthorityDashboard extends Component {
                     aria-controls="v-pills-home"
                     aria-selected="true"
                   >
-                    <i class="fa fa-user-circle-o mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-user-circle-o mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Personal information
                     </span>
                   </a>
 
                   <a
-                    class="nav-link mb-3 p-3 shadow"
+                    className="nav-link mb-3 p-3 shadow"
                     id="v-pills-profile-tab"
                     data-toggle="pill"
                     href="#v-pills-profile"
@@ -340,14 +340,14 @@ class AuthorityDashboard extends Component {
                     aria-controls="v-pills-profile"
                     aria-selected="false"
                   >
-                    <i class="fa fa-calendar-minus-o mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-calendar-minus-o mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Reports
                     </span>
                   </a>
 
                   <a
-                    class="nav-link mb-3 p-3 shadow"
+                    className="nav-link mb-3 p-3 shadow"
                     id="v-pills-messages-tab"
                     data-toggle="pill"
                     href="#v-pills-messages"
@@ -355,14 +355,14 @@ class AuthorityDashboard extends Component {
                     aria-controls="v-pills-messages"
                     aria-selected="false"
                   >
-                    <i class="fa fa-star mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-star mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Reviews
                     </span>
                   </a>
 
                   <a
-                    class="nav-link mb-3 p-3 shadow"
+                    className="nav-link mb-3 p-3 shadow"
                     id="v-pills-settings-tab"
                     data-toggle="pill"
                     href="#v-pills-settings"
@@ -370,36 +370,36 @@ class AuthorityDashboard extends Component {
                     aria-controls="v-pills-settings"
                     aria-selected="false"
                   >
-                    <i class="fa fa-users mr-2"></i>
-                    <span class="font-weight-bold small text-uppercase">
+                    <i className="fa fa-users mr-2"></i>
+                    <span className="font-weight-bold small text-uppercase">
                       Employees
                     </span>
                   </a>
                 </div>
               </div>
 
-              <div class="col-md-9">
-                <div class="tab-content" id="v-pills-tabContent">
+              <div className="col-md-9">
+                <div className="tab-content" id="v-pills-tabContent">
                   <div
-                    class="tab-pane fade shadow rounded bg-white show active p-5"
+                    className="tab-pane fade shadow rounded bg-white show active p-5"
                     id="v-pills-home"
                     role="tabpanel"
                     aria-labelledby="v-pills-home-tab"
                   >
-                    <h4 class=" mb-4" id="info">Personal information</h4>
-                    <p class="text-muted mb-2">
+                    <h4 className=" mb-4" id="info">Personal information</h4>
+                    <p className="text-muted mb-2">
                       Name :  {this.state.auth.firstName} {this.state.auth.lastName}
                     </p>
                   </div>
 
                   <div
-                    class="tab-pane fade shadow rounded bg-white p-5"
+                    className="tab-pane fade shadow rounded bg-white p-5"
                     id="v-pills-profile"
                     role="tabpanel"
                     aria-labelledby="v-pills-profile-tab"
                   >
-                    <h4 class=" mb-4">Appraisal Forms</h4>
-                    <p class="overflow-auto text-muted mb-2">
+                    <h4 className=" mb-4">Appraisal Forms</h4>
+                    <p className="overflow-auto text-muted mb-2">
                       <table className="table table-bordered">
                         <thead>
                           <tr>
@@ -453,13 +453,13 @@ class AuthorityDashboard extends Component {
                   </div>
 
                   <div
-                    class="tab-pane fade shadow rounded bg-white p-5"
+                    className="tab-pane fade shadow rounded bg-white p-5"
                     id="v-pills-messages"
                     role="tabpanel"
                     aria-labelledby="v-pills-messages-tab"
                   >
-                    <h4 class="mb-4">Reviews</h4>
-                    <p class="text-muted mb-2">
+                    <h4 className="mb-4">Reviews</h4>
+                    <p className="text-muted mb-2">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -472,13 +472,13 @@ class AuthorityDashboard extends Component {
                   </div>
 
                   <div
-                    class="tab-pane fade shadow rounded bg-white p-5"
+                    className="tab-pane fade shadow rounded bg-white p-5"
                     id="v-pills-settings"
                     role="tabpanel"
                     aria-labelledby="v-pills-settings-tab"
                   >
-                    <h4 class="mb-4">Employee Table</h4>
-                    <p class="text-muted mb-2">
+                    <h4 className="mb-4">Employee Table</h4>
+                    <p className="text-muted mb-2">
                       Changes will appear here...
                     </p>
                   </div>
