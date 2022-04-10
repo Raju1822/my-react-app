@@ -434,7 +434,7 @@ class AdminDashboard extends Component {
                           <thead>
                             <tr>
                               <th> Employee Id</th>
-                              <th> Employee First Name</th>
+                              <th> Employee Name</th>
                               <th>Salary</th>
                               <th>Action</th>
                             </tr>
