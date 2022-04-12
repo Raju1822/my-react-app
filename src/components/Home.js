@@ -36,7 +36,7 @@ class Home extends Component {
       this.props.history.push('/admin');
     }
     else{
-      alert("Please enter correct Email/Password");
+      alert("You are not Admin \nPlease enter correct Email/Password");
       // alert("Please enter correct Email/Password"+"\n Entered Email:  "+ admin.emailId + "\n Entered Password:  "+ admin.password);
     }
   };

@@ -79,7 +79,33 @@ class EmployeeHeader extends Component {
                   </div>
                 </li>
 
-                <li className="nav-item">
+
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="/"
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i className="fa fa-user mr-2"></i>
+                    Droupdown
+                  </a>
+                  <div
+                    className="dropdown-menu p-2 my-2"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a className="dropdown-item" href="##">
+                      Feature 1
+                    </a>
+                    <a className="dropdown-item" href="##">
+                      Feature 2
+                    </a>
+
+                  </div>
+                </li>
+
+                {/* <li className="nav-item">
                   <a className="nav-link" href="/">
                     <i className="fa fa-search mr-2"></i>
                     Search
@@ -92,7 +118,7 @@ class EmployeeHeader extends Component {
                     <i className="fa fa-phone mr-2"></i>
                     Contact
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

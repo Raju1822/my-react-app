@@ -36,7 +36,7 @@ class AuthorityLogin extends Component {
       this.props.history.push('/auth-home');
     }
     else{
-      alert("Please enter correct Email/Password");
+      alert("You are not Authority \nPlease enter correct Email/Password");
       // alert("Please enter correct Email/Password"+"\n Entered Email:  "+ auth.emailId + "\n Entered Password:  "+ auth.password);
     }
   };

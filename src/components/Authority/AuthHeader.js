@@ -39,12 +39,12 @@ class AuthHeader extends Component {
                   </a>
                 </li>
 
-                {/* <li className="nav-item">
+               {/* <li className="nav-item">
                   <a className="nav-link" href="##">
                     <i className="fa fa-users mr-2" />
                     Something
                   </a>
-                </li>
+                </li> */}
 
                 <li className="nav-item dropdown">
                   <a
@@ -61,19 +61,17 @@ class AuthHeader extends Component {
                     className="dropdown-menu p-2 my-2"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-                    <a className="dropdown-item" href="/">
-                      Something
+                    <a className="dropdown-item" href="##">
+                      Feature 1
                     </a>
-                    <a className="dropdown-item" href="/">
-                      Something 2
+                    <a className="dropdown-item" href="##">
+                      Feature 2
                     </a>
-                    <a className="dropdown-item" href="/">
-                      Something 3
-                    </a>
-                  </div>
-                </li> */}
 
-                <li className="nav-item">
+                  </div>
+                </li>
+
+                {/* <li className="nav-item">
                   <a className="nav-link" href="/search">
                     <i className="fa fa-search mr-2"></i>
                     Search
@@ -86,7 +84,7 @@ class AuthHeader extends Component {
                     <i className="fa fa-phone mr-2"></i>
                     Contact
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

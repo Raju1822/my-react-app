@@ -25,7 +25,7 @@ class EmployeeDashboard extends Component {
   }
 
   logout() {
-    alert("You want to logout ?");
+    alert("You will be logout...");
     window.location.href = "/employee-login";
   }
 

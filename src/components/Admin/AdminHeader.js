@@ -50,7 +50,7 @@ class AdminHeader extends Component {
 
 
 
-                {/* <li className="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
                     href="/"
@@ -73,26 +73,23 @@ class AdminHeader extends Component {
                     <a className="dropdown-item" href="##">
                       Feature 2
                     </a>
-                    <a className="dropdown-item" href="##">
-                      Feature 3
-                    </a>
                   </div>
-                </li> */}
+                </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link" href="/search">
                     <i className="fa fa-search mr-2"></i>
                     Search
                   </a>
-                </li>
+                </li> */}
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link" href="/contact">
                     {" "}
                     <i className="fa fa-phone mr-2"></i>
                     Contact
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>
