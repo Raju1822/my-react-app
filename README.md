@@ -99,7 +99,7 @@ This project is running on [majorprojectnitrr](https://majorprojectnitrr.herokua
 ![development-flow](https://user-images.githubusercontent.com/43608832/162603152-2c370c4f-8e46-4d56-afc8-28d8131598d5.png)
 
 
-## Deploement of Database
+## Deployment of Database
 
 ![h](https://user-images.githubusercontent.com/43608832/162605173-f6d7fe2b-a18f-4556-acd1-171afa3e377f.png)
 
